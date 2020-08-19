@@ -4,13 +4,12 @@ using UnityEngine;
 
 public class PlayerMain : MonoBehaviour {
 
-    public int health = 1;
-    public int gold = 0;
+    public static int health = 1;
 
     void OnTriggerEnter2D(Collider2D collider) {
-        if(collider.tag == "Projectile") {
+        if (collider.tag == "Projectile") {
             Destroy(collider.gameObject);
-            this.health -= 0;
+            health -= 1;
         }
     }
 }
