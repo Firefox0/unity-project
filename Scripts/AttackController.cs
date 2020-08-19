@@ -40,7 +40,7 @@ public class AttackController : MonoBehaviour {
             yield return new WaitForSeconds(5);
             GameObject[] chosen_attackers = new GameObject[3];
             // pick random attackers and shoot projectile
-            int[] random_ints = this.random_unique_ints(3, 0, this.attackers.Length);
+            int[] random_ints = this.random_unique_ints(3, 0, this.attackers.Length - 1);
             foreach (int random_int in random_ints) {
                 GameObject chosen_attacker = this.attackers[random_int];
                 this.shoot_projectile(chosen_attacker.transform, chosen_attacker.transform.rotation);
