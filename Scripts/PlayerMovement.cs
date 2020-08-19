@@ -20,7 +20,7 @@ public class PlayerMovement : MonoBehaviour {
 
         animator.SetFloat("Horizontal", this.movement.x);
         animator.SetFloat("Vertical", this.movement.y);
-        animator.SetFloat("Speed", movement.sqrMagnitude);
+        animator.SetFloat("Speed", this.movement.sqrMagnitude);
     }
 
     // gets called 50 times a second, better for physics
