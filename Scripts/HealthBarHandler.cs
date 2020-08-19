@@ -8,14 +8,14 @@ public class HealthBarHandler : MonoBehaviour {
     public int health;
     void Start() {
         this.health = PlayerMain.health;
-        slider.maxValue = this.health;
-        slider.value = this.health;
+        this.slider.maxValue = this.health;
+        this.slider.value = this.health;
     }
 
     void Update() {
         if (PlayerMain.health != this.health) {
             this.health = PlayerMain.health;
-            slider.value = this.health;
+            this.slider.value = this.health;
         }    
     }
 }
