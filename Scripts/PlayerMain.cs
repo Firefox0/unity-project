@@ -10,7 +10,7 @@ public class PlayerMain : MonoBehaviour {
     void OnTriggerEnter2D(Collider2D collider) {
         if (collider.tag == "Projectile") {
             Destroy(collider.gameObject);
-            health -= 10;
+            health -= 20;
         }
     }
 }
