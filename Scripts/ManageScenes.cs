@@ -8,7 +8,7 @@ public class ManageScenes : MonoBehaviour {
         if(PlayerMain.health <= 0) {
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
             // set manually to 1 so loading scene doesn't get called infinitely
-            PlayerMain.health = 1;
+            PlayerMain.health = PlayerMain.max_health;
         }
     }
 }
