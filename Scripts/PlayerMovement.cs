@@ -31,7 +31,7 @@ public class PlayerMovement : MonoBehaviour {
             // small buffer so you cant hold space all the time and
             // constantly switch between boosted and normal movement speed
             if (stamina >= 10) {
-                this.movement_speed = 10f;
+                this.movement_speed = 7.5f;
             } 
         }
         else {
