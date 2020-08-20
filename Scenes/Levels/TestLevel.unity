@@ -941,8 +941,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -0.13153076, y: 0}
-  m_SizeDelta: {x: -0.26309204, y: 0}
+  m_AnchoredPosition: {x: -0.22999954, y: 0.010000229}
+  m_SizeDelta: {x: -5.483551, y: -14.746492}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &943966958
 MonoBehaviour:
@@ -957,7 +957,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0.0000002404054, b: 0, a: 1}
+  m_Color: {r: 1, g: 0.0000002404054, b: 0, a: 0.7529412}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1088,6 +1088,7 @@ GameObject:
   - component: {fileID: 1085512629}
   - component: {fileID: 1085512631}
   - component: {fileID: 1085512630}
+  - component: {fileID: 1085512632}
   m_Layer: 5
   m_Name: Health Bar
   m_TagString: Untagged
@@ -1113,7 +1114,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 127.43, y: 217}
+  m_AnchoredPosition: {x: 91.6, y: 205}
   m_SizeDelta: {x: 92.1998, y: 30.759987}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1085512630
@@ -1180,6 +1181,14 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!222 &1085512632
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1085512628}
+  m_CullTransparentMesh: 0
 --- !u!1 &1166979760
 GameObject:
   m_ObjectHideFlags: 0
@@ -1216,8 +1225,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 129.1, y: 195.69}
-  m_SizeDelta: {x: 99.99997, y: 93.32213}
+  m_AnchoredPosition: {x: 93.27002, y: 192.5}
+  m_SizeDelta: {x: 99.99997, y: 93.32214}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1166979762
 MonoBehaviour:
@@ -1318,7 +1327,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -1.67, y: -4.9900246}
-  m_SizeDelta: {x: 91.05673, y: 21.651985}
+  m_SizeDelta: {x: 90, y: 15}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1215975898
 MonoBehaviour:
@@ -1333,7 +1342,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.7529412}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -3593,7 +3602,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1822206863}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 332.88312, y: 461, z: -457.98236}
+  m_LocalPosition: {x: 295, y: 461, z: -457.98236}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 17827927}
@@ -3836,8 +3845,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -2.5, y: -5.640026}
-  m_SizeDelta: {x: -10.598724, y: -72.96294}
+  m_AnchoredPosition: {x: -1.77, y: -5.27}
+  m_SizeDelta: {x: -13.240601, y: -81.62134}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2075654467
 MonoBehaviour:
@@ -3852,7 +3861,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 1, b: 0.20531154, a: 1}
+  m_Color: {r: 0, g: 1, b: 0.20531154, a: 0.7529412}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -4102,10 +4111,10 @@ RectTransform:
   m_Father: {fileID: 1085512629}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.13154984, y: -0.0000047683716}
-  m_SizeDelta: {x: -0.26309204, y: 0.7599945}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -0.1315651, y: -0.0000047683716}
+  m_SizeDelta: {x: 90, y: 20}
   m_Pivot: {x: 0.49999985, y: 0.5}
 --- !u!114 &2103158407
 MonoBehaviour:
@@ -4120,7 +4129,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.7529412}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
