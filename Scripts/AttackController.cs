@@ -17,6 +17,8 @@ public class AttackController : MonoBehaviour {
     void Start() {
         this.random = new System.Random();
         this.attackers = GameObject.FindGameObjectsWithTag("Attacker");
+        // coroutines allow functions to be suspended while getting executed, 
+        // otherwise the game would be stuck in the loop
         StartCoroutine(this.initialize_attacks());
     }
 
