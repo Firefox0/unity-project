@@ -1,2 +1,5 @@
 *.meta
 Temp
+.vs
+obj
+unity-project.sln
