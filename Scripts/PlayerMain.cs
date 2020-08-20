@@ -4,13 +4,12 @@ using UnityEngine;
 
 public class PlayerMain : MonoBehaviour {
 
-    public static int max_health = 100;
-    public static int health = 100;
+    public GameObject player_main;
 
-    void OnTriggerEnter2D(Collider2D collider) {
-        if (collider.tag == "Projectile") {
-            Destroy(collider.gameObject);
-            health -= 20;
-        }
+    public static int scene_index = 0;
+    public static int gold = 0;
+
+    void Start() {
+        DontDestroyOnLoad(player_main);
     }
 }
