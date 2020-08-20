@@ -4,11 +4,11 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class ShopSceneHandler : MonoBehaviour {
+public class OptionsSceneHandler : MonoBehaviour {
 
     public Button back_button;
 
     void Start() {
-        this.back_button.onClick.AddListener(() => SceneManager.LoadScene(4));
+        this.back_button.onClick.AddListener(() => SceneManager.LoadScene(0));
     }
 }

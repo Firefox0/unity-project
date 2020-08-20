@@ -15,7 +15,7 @@ public class PlayerHit : MonoBehaviour {
             Destroy(collider.gameObject);
             health -= 20;
             if (health <= 0) {
-                SceneManager.LoadScene(3);
+                SceneManager.LoadScene(4);
                 health = max_health;
                 PlayerMovement.stamina = PlayerMovement.max_stamina;
             }

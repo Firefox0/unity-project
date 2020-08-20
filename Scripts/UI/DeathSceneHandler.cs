@@ -12,9 +12,7 @@ public class DeathSceneHandler : MonoBehaviour {
 
     void Start() {
         this.retry_button.onClick.AddListener(() => SceneManager.LoadScene(PlayerMain.scene_index));
-        this.shop_button.onClick.AddListener(() => SceneManager.LoadScene(2));
+        this.shop_button.onClick.AddListener(() => SceneManager.LoadScene(3));
         this.back_button.onClick.AddListener(() => SceneManager.LoadScene(1));
     }
-
-
 }

@@ -11,8 +11,8 @@ public class LevelSelectorHandler : MonoBehaviour {
 
     void Start() {
         level_1.onClick.AddListener(() => {
-            PlayerMain.scene_index = 4;
-            SceneManager.LoadScene(4);
+            PlayerMain.scene_index = 5;
+            SceneManager.LoadScene(5);
         });
         back_button.onClick.AddListener(() => SceneManager.LoadScene(0));
     }
