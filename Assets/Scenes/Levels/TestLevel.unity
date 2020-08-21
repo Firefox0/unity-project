@@ -907,7 +907,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20c1012e853664347b627959d8d3d5b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player_main: {fileID: 925809727}
 --- !u!1 &943966956
 GameObject:
   m_ObjectHideFlags: 0
@@ -1474,7 +1473,6 @@ GameObject:
   - component: {fileID: 1276735450}
   - component: {fileID: 1276735452}
   - component: {fileID: 1276735451}
-  - component: {fileID: 1276735453}
   m_Layer: 5
   m_Name: StarDisplay
   m_TagString: Untagged
@@ -1543,18 +1541,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1276735449}
   m_CullTransparentMesh: 0
---- !u!114 &1276735453
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1276735449}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7ba76d03608722843911eb7454a73026, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1287887936
 GameObject:
   m_ObjectHideFlags: 0
@@ -4194,7 +4180,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movement_speed: 5
-  rigidbody: {fileID: 2082930370}
+  rigidbody2d: {fileID: 2082930370}
   animator: {fileID: 2082930368}
 --- !u!50 &2082930370
 Rigidbody2D:

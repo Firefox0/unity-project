@@ -10,7 +10,7 @@ public class CountdownHandler : MonoBehaviour {
     public Text star_display;
 
     float current_time = 0f;
-    float[] star_requirements = { 60, 90, 120 };
+    float[] star_requirements = { 1, 3, 5 };
     int star_counter = 0;
 
     void Start() {
@@ -36,6 +36,7 @@ public class CountdownHandler : MonoBehaviour {
     void next_requirement() {
         if (this.star_counter == this.star_requirements.Length) {
             SceneManager.LoadScene(1);
+            return;
         }
         this.current_time = this.star_requirements[star_counter];
     }

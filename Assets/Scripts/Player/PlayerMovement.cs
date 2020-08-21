@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour {
 
     public float movement_speed = 5f;
-    public Rigidbody2D rigidbody;
+    public Rigidbody2D rigidbody2d;
     Vector2 movement;
     public Animator animator;
     public static float max_stamina = 100f;
@@ -42,6 +42,6 @@ public class PlayerMovement : MonoBehaviour {
         }
         // moving diagonally returns a magnitude of square root of 2, which would make diagonal movement 40% faster,
         // normalize movement to keep the same speed even when moving diagonally
-        this.rigidbody.MovePosition(this.rigidbody.position + this.movement.normalized * this.movement_speed * Time.fixedDeltaTime);
+        this.rigidbody2d.MovePosition(this.rigidbody2d.position + this.movement.normalized * this.movement_speed * Time.fixedDeltaTime);
     }
 }
