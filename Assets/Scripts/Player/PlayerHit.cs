@@ -22,7 +22,7 @@ public class PlayerHit : MonoBehaviour {
                     PlayerData.secrets.level_1.stars_earned = CountdownHandler.star_counter;
                     IO.save_json();
                 }
-                SceneManager.LoadScene(Scenes.DEATH);
+                SceneManager.LoadScene((int)Scenes.DEATH);
             }
         }
     }

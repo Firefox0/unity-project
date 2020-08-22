@@ -38,7 +38,7 @@ public class CountdownHandler : MonoBehaviour {
         if (star_counter == this.star_requirements.Length) {
             PlayerData.secrets.level_1.stars_earned = star_counter;
             IO.save_json();
-            SceneManager.LoadScene(Scenes.LEVELSELECTION);
+            SceneManager.LoadScene((int)Scenes.LEVELSELECTION);
             return;
         }
         this.current_time = this.star_requirements[star_counter];
