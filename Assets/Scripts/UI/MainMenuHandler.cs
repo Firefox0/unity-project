@@ -11,6 +11,7 @@ public class MainMenuHandler : MonoBehaviour {
     public Button quit_button;
 
     void Start() {
+        IO.load_json();
         // scene index from build settings
         this.play_button.onClick.AddListener(() => SceneManager.LoadScene(1));
         this.options_button.onClick.AddListener(() => SceneManager.LoadScene(2));
