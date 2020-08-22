@@ -15,6 +15,10 @@ public class PlayerHit : MonoBehaviour {
             Destroy(collider.gameObject);
             health -= 20;
             if (health <= 0) {
+                if (CountdownHandler.star_counter > PlayerData.secrets.level_1.stars_earned) {
+                    PlayerData.secrets.level_1.stars_earned = CountdownHandler.star_counter;
+                    IO.save_json();
+                }
                 SceneManager.LoadScene(4);
                 health = max_health;
                 PlayerMovement.stamina = PlayerMovement.max_stamina;
