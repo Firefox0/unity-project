@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Build.Reporting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -37,7 +38,7 @@ public class CountdownHandler : MonoBehaviour {
         if (star_counter == this.star_requirements.Length) {
             PlayerData.secrets.level_1.stars_earned = star_counter;
             IO.save_json();
-            SceneManager.LoadScene(1);
+            SceneManager.LoadScene(Scenes.LEVELSELECTION);
             return;
         }
         this.current_time = this.star_requirements[star_counter];
