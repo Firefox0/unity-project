@@ -16,7 +16,7 @@ public class Secrets {
     public int stamina_level;
     public int walking_speed_level;
     public int running_speed_level;
-    public int money;
+    public float money;
     public int level;
     public int experience;
     public Level level_1;
@@ -38,7 +38,7 @@ public class Secrets {
         this.stamina_level = 0;
         this.walking_speed_level = 0;
         this.running_speed_level = 0;
-        this.money = 0;
+        this.money = 10000000;
         this.level = 0;
         this.experience = 0;
         this.level_1 = new Level(true);
