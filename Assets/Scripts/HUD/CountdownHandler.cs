@@ -11,7 +11,7 @@ public class CountdownHandler : MonoBehaviour {
 
     float current_time = 0f;
     float[] star_requirements = { 1, 3, 5 };
-    int star_counter = 0;
+    public static int star_counter = 0;
 
     void Start() {
         this.current_time = this.star_requirements[star_counter];
@@ -29,12 +29,14 @@ public class CountdownHandler : MonoBehaviour {
     }
 
     void update_stars() {
-        this.star_counter++;
+        star_counter++;
         this.star_display.text += '*';
     }
 
     void next_requirement() {
-        if (this.star_counter == this.star_requirements.Length) {
+        if (star_counter == this.star_requirements.Length) {
+            PlayerData.secrets.level_1.stars_earned = star_counter;
+            IO.save_json();
             SceneManager.LoadScene(1);
             return;
         }
