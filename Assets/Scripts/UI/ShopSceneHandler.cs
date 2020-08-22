@@ -9,6 +9,6 @@ public class ShopSceneHandler : MonoBehaviour {
     public Button back_button;
 
     void Start() {
-        this.back_button.onClick.AddListener(() => SceneManager.LoadScene(4));
+        this.back_button.onClick.AddListener(() => SceneManager.LoadScene(Scenes.DEATH));
     }
 }

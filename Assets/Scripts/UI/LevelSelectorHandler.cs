@@ -18,9 +18,9 @@ public class LevelSelectorHandler : MonoBehaviour {
             this.level_1_text.text += string.Concat(Enumerable.Repeat('*', PlayerData.secrets.level_1.stars_earned));
         } 
         level_1.onClick.AddListener(() => {
-            PlayerData.scene_index = 5;
-            SceneManager.LoadScene(5);
+            PlayerData.scene_index = Scenes.TESTLEVEL;
+            SceneManager.LoadScene(Scenes.TESTLEVEL);
         });
-        back_button.onClick.AddListener(() => SceneManager.LoadScene(0));
+        back_button.onClick.AddListener(() => SceneManager.LoadScene(Scenes.MAINMENU));
     }
 }

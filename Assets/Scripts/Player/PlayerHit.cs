@@ -19,7 +19,7 @@ public class PlayerHit : MonoBehaviour {
                     PlayerData.secrets.level_1.stars_earned = CountdownHandler.star_counter;
                     IO.save_json();
                 }
-                SceneManager.LoadScene(4);
+                SceneManager.LoadScene(Scenes.DEATH);
                 health = max_health;
                 PlayerMovement.stamina = PlayerMovement.max_stamina;
             }

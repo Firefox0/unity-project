@@ -9,6 +9,6 @@ public class OptionsSceneHandler : MonoBehaviour {
     public Button back_button;
 
     void Start() {
-        this.back_button.onClick.AddListener(() => SceneManager.LoadScene(0));
+        this.back_button.onClick.AddListener(() => SceneManager.LoadScene(Scenes.MAINMENU));
     }
 }
