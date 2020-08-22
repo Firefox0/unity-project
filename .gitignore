@@ -1,7 +1,0 @@
-*.meta
-*.csproj
-Temp
-.vs
-obj
-unity-project.sln
-Library

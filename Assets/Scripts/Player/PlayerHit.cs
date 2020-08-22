@@ -7,8 +7,11 @@ public class PlayerHit : MonoBehaviour {
 
     public GameObject player;
 
-    public static int max_health = 100;
-    public static int health = 100;
+    public static float health;
+
+    void Awake() {
+        health = PlayerData.secrets.health;    
+    }
 
     void OnTriggerEnter2D(Collider2D collider) {
         if (collider.tag == "Projectile") {
@@ -19,9 +22,7 @@ public class PlayerHit : MonoBehaviour {
                     PlayerData.secrets.level_1.stars_earned = CountdownHandler.star_counter;
                     IO.save_json();
                 }
-                SceneManager.LoadScene(Scenes.DEATH);
-                health = max_health;
-                PlayerMovement.stamina = PlayerMovement.max_stamina;
+                SceneManager.LoadScene((int)Scenes.DEATH);
             }
         }
     }
