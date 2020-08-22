@@ -4,12 +4,16 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour {
 
-    public float movement_speed = 5f;
+    public float movement_speed;
     public Rigidbody2D rigidbody2d;
     Vector2 movement;
     public Animator animator;
-    public static float max_stamina = 100f;
-    public static float stamina = 100f;
+    public static float stamina;
+
+    void Awake() {
+        this.movement_speed = PlayerData.secrets.walking_speed;
+        stamina = PlayerData.secrets.stamina;
+    }
 
     // Update is called once per frame
     void Update() {
@@ -31,12 +35,12 @@ public class PlayerMovement : MonoBehaviour {
             // small buffer so you cant hold space all the time and
             // constantly switch between boosted and normal movement speed
             if (stamina >= 10) {
-                this.movement_speed = 7.5f;
+                this.movement_speed = PlayerData.secrets.running_speed;
             } 
         }
         else {
-            this.movement_speed = 5f;
-            if (stamina < 100f) {
+            this.movement_speed = PlayerData.secrets.walking_speed;
+            if (stamina < PlayerData.secrets.stamina) {
                 stamina += 0.5f;
             }
         }

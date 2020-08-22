@@ -8,6 +8,14 @@ public static class PlayerData {
 }
 
 public class Secrets {
+    public float health;
+    public float stamina;
+    public float walking_speed;
+    public float running_speed;
+    public int health_level;
+    public int stamina_level;
+    public int walking_speed_level;
+    public int running_speed_level;
     public int money;
     public int level;
     public int experience;
@@ -22,6 +30,14 @@ public class Secrets {
     public Level level_9;
 
     public Secrets() {
+        this.health = 100f;
+        this.stamina = 100f;
+        this.walking_speed = 5f;
+        this.running_speed = 7.5f;
+        this.health_level = 0;
+        this.stamina_level = 0;
+        this.walking_speed_level = 0;
+        this.running_speed_level = 0;
         this.money = 0;
         this.level = 0;
         this.experience = 0;
