@@ -1,0 +1,61 @@
+{
+	"player_data": {
+		"money": 0,
+		"level": 0,
+		"experience": 0
+	},
+	"level_1": {
+		"unlocked": true,
+		"stars_earned": 0,
+		"extra_crown": false,
+		"record": 0
+	},
+	"level_2": {
+		"unlocked": false,
+		"stars_earned": 0,
+		"extra_crown": false,
+		"record": 0
+	},
+	"level_3": {
+		"unlocked": false,
+		"stars_earned": 0,
+		"extra_crown": false,
+		"record": 0
+	},
+	"level_4": {
+		"unlocked": false,
+		"stars_earned": 0,
+		"extra_crown": false,
+		"record": 0
+	},
+	"level_5": {
+		"unlocked": false,
+		"stars_earned": 0,
+		"extra_crown": false,
+		"record": 0
+	},
+	"level_6": {
+		"unlocked": false,
+		"stars_earned": 0,
+		"extra_crown": false,
+		"record": 0
+	},
+	"level_7": {
+		"unlocked": false,
+		"stars_earned": 0,
+		"extra_crown": false,
+		"record": 0
+	},
+	"level_8": {
+		"unlocked": false,
+		"stars_earned": 0,
+		"extra_crown": false,
+		"record": 0
+	},
+	"level_9": {
+		"unlocked": false,
+		"stars_earned": 0,
+		"extra_crown": false,
+		"record": 0
+	}
+}
