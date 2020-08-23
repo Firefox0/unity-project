@@ -10,19 +10,31 @@ public class AttackController : MonoBehaviour {
     public GameObject projectile_prefab_2;
     public GameObject projectile_prefab_3;
     public GameObject player;
+    private Projectile projectile;
+    private Projectile projectile_2;
+    private Projectile projectile_3;
     System.Random random;
+    // all attackers
     GameObject[] attackers;
+    public int minimum_attackers = 3;
+    public int maximum_attackers = 6;
+    public int amount_attacks = 3;
+    public float base_interval = 3f;
 
     // Start is called before the first frame update
     void Start() {
         this.random = new System.Random();
         this.attackers = GameObject.FindGameObjectsWithTag("Attacker");
+        this.projectile = new Projectile(this.projectile_prefab, 5f);
+        this.projectile_2 = new Projectile(this.projectile_prefab_2, 2.5f);
+        this.projectile_3 = new Projectile(this.projectile_prefab_3, 7.5f);
         // coroutines allow functions to be suspended while getting executed, 
         // otherwise the game would be stuck in the loop
         StartCoroutine(this.initialize_attacks());
     }
 
     void FixedUpdate() {
+        // let attackers focus player
         foreach(GameObject attacker in this.attackers) {
             attacker.transform.up = new Vector2(player.transform.position.x - attacker.transform.position.x,
                                                 player.transform.position.y - attacker.transform.position.y);
@@ -32,6 +44,7 @@ public class AttackController : MonoBehaviour {
     int[] random_unique_ints(int amount, int min, int max) {
         // get specific amount of random unique ints,
         // considering the min and max range (inclusive) 
+        // used to choose random attackers
         if (amount > (max - min)) {
             return null;
         }
@@ -51,37 +64,37 @@ public class AttackController : MonoBehaviour {
         int amount_attackers;
         int attack_type;
         while (true) {
-            yield return new WaitForSeconds(3);
+            yield return new WaitForSeconds(this.base_interval);
             // random amount of attackers
-            amount_attackers = random.Next(3, 6);
-            // pick random attackers and shoot projectile
+            amount_attackers = random.Next(this.minimum_attackers, this.maximum_attackers);
+            // pick random attackers
             int[] random_ints = this.random_unique_ints(amount_attackers, 0, this.attackers.Length - 1);
             foreach (int random_int in random_ints) {
                 GameObject chosen_attacker = this.attackers[random_int];
-                attack_type = random.Next(0, 3);
+                attack_type = random.Next(0, this.amount_attacks);
                 switch (attack_type) {
                     case (0):
-                        this.shoot_projectile(chosen_attacker.transform, this.projectile_prefab, 5f);
+                        this.shoot_projectile(this.projectile, chosen_attacker.transform);
                         break;
                     case (1):
                         for (int i = 0; i < 5; i++) {
-                            this.shoot_projectile(chosen_attacker.transform, this.projectile_prefab_2, 2.5f);
+                            this.shoot_projectile(this.projectile_2, chosen_attacker.transform);
                             // blocks the other attacks, but necessary so all projectiles dont spawn on one point, needs improvement
                             yield return new WaitForSeconds(0.2f);
                         }
                         break;
                     case (2):
-                        this.shoot_projectile(chosen_attacker.transform, this.projectile_prefab_3, 7.5f);
+                        this.shoot_projectile(this.projectile_3, chosen_attacker.transform);
                         break;
                 }
             }
         }
     }
 
-    void shoot_projectile(Transform transform, GameObject projectile_prefab, float projectile_force) {
+    void shoot_projectile(Projectile projectile, Transform transform) {
         // create projectile and apply force to the rigidbody to shoot it
-        GameObject projectile = Instantiate(projectile_prefab, transform.position, transform.rotation);
-        Rigidbody2D rigidbody = projectile.GetComponent<Rigidbody2D>();
-        rigidbody.AddForce(transform.up * projectile_force, ForceMode2D.Impulse);
+        GameObject instantiated_projectile = Instantiate(projectile.prefab, transform.position, transform.rotation);
+        Rigidbody2D rigidbody = instantiated_projectile.GetComponent<Rigidbody2D>();
+        rigidbody.AddForce(transform.up * projectile.speed, ForceMode2D.Impulse);
     }
 }
