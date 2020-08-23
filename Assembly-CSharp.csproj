@@ -70,6 +70,7 @@
     <Compile Include="Assets\Scripts\Scenes.cs" />
     <Compile Include="Assets\Scripts\IO.cs" />
     <Compile Include="Assets\Scripts\UI\OptionsSceneHandler.cs" />
+    <Compile Include="Assets\Scripts\Projectiles.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\Textures\TextMesh Pro\Shaders\TMPro.cginc" />
