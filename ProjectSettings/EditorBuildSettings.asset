@@ -21,6 +21,9 @@ EditorBuildSettings:
     path: Assets/Scenes/UI/Death.unity
     guid: 81d87d22bd495b44cb149db9522193c3
   - enabled: 1
-    path: Assets/Scenes/Levels/TestLevel.unity
+    path: Assets/Scenes/Levels/Level_1.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/Levels/Level_2.unity
+    guid: 5e983947b1e234b44a9950278c014aad
   m_configObjects: {}
