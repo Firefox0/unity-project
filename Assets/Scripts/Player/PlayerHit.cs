@@ -6,20 +6,20 @@ using UnityEngine.SceneManagement;
 public class PlayerHit : MonoBehaviour {
 
     public GameObject player;
-
     public static float health;
 
     void Awake() {
         health = PlayerData.secrets.health;    
     }
 
-    void OnTriggerEnter2D(Collider2D collider) {
+    protected void on_trigger(Collider2D collider, ref int current_level) {
         if (collider.tag == "Projectile") {
             Destroy(collider.gameObject);
-            health -= 20;
+            float damage = collider.gameObject.GetComponent<Properties>().damage;
+            health -= damage;
             if (health <= 0) {
-                if (CountdownHandler.star_counter > PlayerData.secrets.level_1.stars_earned) {
-                    PlayerData.secrets.level_1.stars_earned = CountdownHandler.star_counter;
+                if (CountdownHandler.star_counter > current_level) {
+                    current_level = CountdownHandler.star_counter;
                     IO.save_json();
                 }
                 SceneManager.LoadScene((int)Scenes.DEATH);
