@@ -10,12 +10,12 @@ GameObject:
   m_Component:
   - component: {fileID: 4836584702748315198}
   - component: {fileID: 3150081380577726647}
-  - component: {fileID: 6446597471993339593}
   - component: {fileID: 6752914966553846866}
   - component: {fileID: -4940497630153383913}
+  - component: {fileID: 7600177099047160026}
   m_Layer: 0
   m_Name: Projectile 2
-  m_TagString: Untagged
+  m_TagString: Projectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -85,32 +85,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &6446597471993339593
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5620937814058541044}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.056379497, y: 0.032577336}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.32, y: 0.32}
-    newSize: {x: 0.3, y: 0.32}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1.0989071, y: 0.7770505}
-  m_EdgeRadius: 0
 --- !u!50 &6752914966553846866
 Rigidbody2D:
   serializedVersion: 4
@@ -144,5 +118,40 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4866484a15062b64d9564442de0a816c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2.5
-  damage: 5
+  speed: 2
+  damage: 10
+--- !u!60 &7600177099047160026
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5620937814058541044}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.32, y: 0.32}
+    newSize: {x: 0.3, y: 0.32}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.09574825, y: -0.02275157}
+      - {x: -0.006750798, y: 0.077248454}
+      - {x: -0.04600073, y: 0.09949869}
+      - {x: -0.11474936, y: 0.13324916}
+      - {x: -0.13624956, y: 0.10624955}
+      - {x: -0.09874496, y: 0.040753752}
+      - {x: 0.03525062, y: -0.115748234}
+      - {x: 0.08449689, y: -0.11049758}
+      - {x: 0.11049761, y: -0.08099889}
+      - {x: 0.12024878, y: -0.05675081}
