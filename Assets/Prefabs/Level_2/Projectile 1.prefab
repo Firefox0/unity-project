@@ -12,10 +12,10 @@ GameObject:
   - component: {fileID: 9096595673506996654}
   - component: {fileID: 7413122749039268945}
   - component: {fileID: 5240017388835678228}
-  - component: {fileID: 545345092409820411}
+  - component: {fileID: -4304188355195605138}
   m_Layer: 0
   m_Name: Projectile 1
-  m_TagString: Untagged
+  m_TagString: Projectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -27,13 +27,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5109505826915554084}
-  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &9096595673506996654
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -98,7 +98,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.04808572, y: 0.04785031}
+  m_Offset: {x: -0.002506256, y: 0.0046207905}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -109,7 +109,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.707885, y: 1.3227829}
+  m_Size: {x: 0.94268334, y: 0.5049125}
   m_EdgeRadius: 0
 --- !u!50 &5240017388835678228
 Rigidbody2D:
@@ -132,7 +132,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &545345092409820411
+--- !u!114 &-4304188355195605138
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -141,10 +141,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 5109505826915554084}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: edb79bcf78d98e045b05c8b29ec0afe5, type: 3}
+  m_Script: {fileID: 11500000, guid: 161b6e787c6b9224a9ce83d5a59dd4b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
-  damage: 0
+  speed: 3
+  damage: 20
+  rotation_speed: 100
   time: 5
-  left_on_ground: {fileID: 3552174375951524043, guid: ca864a652292d9045a600cc17e5fec33, type: 3}
