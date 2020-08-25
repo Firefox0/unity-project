@@ -70,7 +70,7 @@ public class AttackController : MonoBehaviour {
                         this.shoot_projectile(this.projectile_prefab, chosen_attacker.transform);
                         break;
                     case (1):
-                        for (int i = 0; i < 5; i++) {
+                        for (int i = 0; i < 3; i++) {
                             this.shoot_projectile(this.projectile_prefab_2, chosen_attacker.transform);
                             // blocks the other attacks, but necessary so all projectiles dont spawn on one point, needs improvement
                             yield return new WaitForSeconds(0.2f);
@@ -86,8 +86,8 @@ public class AttackController : MonoBehaviour {
 
     void shoot_projectile(GameObject projectile_prefab, Transform transform) {
         // create projectile and apply force to the rigidbody to shoot it
-        GameObject instantiated_projectile = Instantiate(projectile_prefab, transform.position, transform.rotation);
+        GameObject instantiated_projectile = Instantiate(projectile_prefab, transform.position, new Quaternion(transform.rotation.x, transform.rotation.y, transform.rotation.z + projectile_prefab.transform.rotation.z, transform.rotation.w));
         Rigidbody2D rigidbody = instantiated_projectile.GetComponent<Rigidbody2D>();
-        rigidbody.AddForce(transform.up * projectile_prefab.GetComponent<Properties>().speed, ForceMode2D.Impulse);
+        rigidbody.AddForce(transform.up * projectile_prefab.GetComponent<Basic_Projectile>().speed, ForceMode2D.Impulse);
     }
 }
