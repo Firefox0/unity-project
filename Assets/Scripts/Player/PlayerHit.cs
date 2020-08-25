@@ -5,7 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class PlayerHit : MonoBehaviour {
 
-    public GameObject player;
     public static float health;
 
     void Awake() {
@@ -13,9 +12,10 @@ public class PlayerHit : MonoBehaviour {
     }
 
     protected void on_trigger(Collider2D collider, ref int current_level) {
-        if (collider.tag == "Projectile") {
+        Debug.Log(collider.name);
+        if (collider.tag == "Projectile") { 
             Destroy(collider.gameObject);
-            float damage = collider.gameObject.GetComponent<Properties>().damage;
+            float damage = collider.gameObject.GetComponent<Basic_Projectile>().damage;
             health -= damage;
             if (health <= 0) {
                 if (CountdownHandler.star_counter > current_level) {
