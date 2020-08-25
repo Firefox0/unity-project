@@ -86,7 +86,7 @@ public class AttackController : MonoBehaviour {
 
     void shoot_projectile(GameObject projectile_prefab, Transform transform) {
         // create projectile and apply force to the rigidbody to shoot it
-        GameObject instantiated_projectile = Instantiate(projectile_prefab, transform.position, new Quaternion(transform.rotation.x, transform.rotation.y, transform.rotation.z + projectile_prefab.transform.rotation.z, transform.rotation.w));
+        GameObject instantiated_projectile = Instantiate(projectile_prefab, transform.position, transform.rotation);
         Rigidbody2D rigidbody = instantiated_projectile.GetComponent<Rigidbody2D>();
         rigidbody.AddForce(transform.up * projectile_prefab.GetComponent<Basic_Projectile>().speed, ForceMode2D.Impulse);
     }
