@@ -1,7 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using Unity.Mathematics;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class attacker : MonoBehaviour {
 
