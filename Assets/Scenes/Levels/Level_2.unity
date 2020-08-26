@@ -320,16 +320,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 158744953}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 72b8329358b1aa64f8b57cc5b7825557, type: 3}
+  m_Script: {fileID: 11500000, guid: daf49f5139a5be7419971795b1063e29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectile_prefab: {fileID: 5109505826915554084, guid: 529ccc1c83a7b2c4ea08a277b7508366, type: 3}
-  projectile_prefab_2: {fileID: 5620937814058541044, guid: 24fcb0448fd4a92409007f2a6158b986, type: 3}
-  projectile_prefab_3: {fileID: 8144136236437400467, guid: 19a67061f8e757e4392c4d84a505ac17, type: 3}
+  projectile_prefabs:
+  - {fileID: 5109505826915554084, guid: 529ccc1c83a7b2c4ea08a277b7508366, type: 3}
+  - {fileID: 5620937814058541044, guid: 24fcb0448fd4a92409007f2a6158b986, type: 3}
+  - {fileID: 8144136236437400467, guid: 19a67061f8e757e4392c4d84a505ac17, type: 3}
   player: {fileID: 2117883531}
-  minimum_attackers: 2
-  maximum_attackers: 4
-  amount_attacks: 3
+  minimum_attackers: 1
+  maximum_attackers: 3
   base_interval: 1
 --- !u!1 &304635665
 GameObject:
@@ -3799,4 +3799,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dea1d3959e9b26240971c197f50fbf6a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  current_level: 0
