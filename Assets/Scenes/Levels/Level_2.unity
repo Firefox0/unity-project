@@ -328,9 +328,9 @@ MonoBehaviour:
   - {fileID: 5620937814058541044, guid: 24fcb0448fd4a92409007f2a6158b986, type: 3}
   - {fileID: 8144136236437400467, guid: 19a67061f8e757e4392c4d84a505ac17, type: 3}
   player: {fileID: 2117883531}
-  minimum_attackers: 1
-  maximum_attackers: 3
-  base_interval: 1
+  minimum_attackers: 2
+  maximum_attackers: 4
+  base_interval: 0.5
 --- !u!1 &304635665
 GameObject:
   m_ObjectHideFlags: 0

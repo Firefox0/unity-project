@@ -2862,6 +2862,57 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1 &1306934448
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1306934450}
+  - component: {fileID: 1306934449}
+  m_Layer: 0
+  m_Name: AttackController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1306934449
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1306934448}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48f0858a523b9ab439043958f6c7851c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  projectile_prefabs:
+  - {fileID: 9104330548183936978, guid: 8c200823d336bce428e534785a495638, type: 3}
+  - {fileID: 7533519372487636561, guid: 79c417afa8213004c9dca0fe3c01b6e8, type: 3}
+  - {fileID: 3169481020648490782, guid: 56f210ad8fa7b8f4298c2652af7612b5, type: 3}
+  player: {fileID: 937585760}
+  minimum_attackers: 2
+  maximum_attackers: 4
+  base_interval: 1
+--- !u!4 &1306934450
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1306934448}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.8749604, y: -0.36219457, z: -27.610237}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1329554600
 GameObject:
   m_ObjectHideFlags: 0
