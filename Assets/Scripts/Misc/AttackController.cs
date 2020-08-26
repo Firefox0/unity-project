@@ -6,27 +6,21 @@ using UnityEngine;
 
 public class AttackController : MonoBehaviour {
 
-    public GameObject projectile_prefab;
-    public GameObject projectile_prefab_2;
-    public GameObject projectile_prefab_3;
+    public GameObject[] projectile_prefabs;
     public GameObject player;
-    System.Random random;
-    // all attackers
-    GameObject[] attackers;
-    public int minimum_attackers = 3;
-    public int maximum_attackers = 6;
-    public int amount_attacks = 3;
-    public float base_interval = 3f;
+    public int minimum_attackers;
+    public int maximum_attackers;
+    public float base_interval;
 
-    void Start() {
+    private System.Random random;
+    protected GameObject[] attackers;
+
+    private void Awake() {
         this.random = new System.Random();
         this.attackers = GameObject.FindGameObjectsWithTag("Attacker");
-        // coroutines allow functions to be suspended while getting executed, 
-        // otherwise the game would be stuck in the loop
-        StartCoroutine(this.initialize_attacks());
     }
 
-    void FixedUpdate() {
+    private void FixedUpdate() {
         // let attackers focus player
         foreach(GameObject attacker in this.attackers) {
             attacker.transform.up = new Vector2(player.transform.position.x - attacker.transform.position.x,
@@ -34,9 +28,9 @@ public class AttackController : MonoBehaviour {
         }
     }
 
-    int[] random_unique_ints(int amount, int min, int max) {
+    private int[] get_unique_ints(int amount, int min, int max) {
         // get specific amount of random unique ints,
-        // considering the min and max range (inclusive) 
+        // considering the min and max range (exclusive) 
         // used to choose random attackers
         if (amount > (max - min)) {
             return null;
@@ -44,7 +38,7 @@ public class AttackController : MonoBehaviour {
         int[] int_array = new int[amount];
         int counter = 0;
         while (counter < amount) {
-            int random_int = random.Next(min, max + 1);
+            int random_int = random.Next(min, max);
             if (!Array.Exists<int>(int_array, element => element == random_int)) {
                 int_array[counter] = random_int;
                 counter++;
@@ -53,38 +47,16 @@ public class AttackController : MonoBehaviour {
         return int_array;
     }
 
-    IEnumerator initialize_attacks() {
-        int amount_attackers;
-        int attack_type;
-        while (true) {
-            yield return new WaitForSeconds(this.base_interval);
-            // random amount of attackers
-            amount_attackers = random.Next(this.minimum_attackers, this.maximum_attackers);
-            // pick random attackers
-            int[] random_ints = this.random_unique_ints(amount_attackers, 0, this.attackers.Length - 1);
-            foreach (int random_int in random_ints) {
-                GameObject chosen_attacker = this.attackers[random_int];
-                attack_type = random.Next(0, this.amount_attacks);
-                switch (attack_type) {
-                    case (0):
-                        this.shoot_projectile(this.projectile_prefab, chosen_attacker.transform);
-                        break;
-                    case (1):
-                        for (int i = 0; i < 3; i++) {
-                            this.shoot_projectile(this.projectile_prefab_2, chosen_attacker.transform);
-                            // blocks the other attacks, but necessary so all projectiles dont spawn on one point, needs improvement
-                            yield return new WaitForSeconds(0.2f);
-                        }
-                        break;
-                    case (2):
-                        this.shoot_projectile(this.projectile_prefab_3, chosen_attacker.transform);
-                        break;
-                }
-            }
-        }
+    protected int[] select_random_attackers() {
+        int amount_attackers = this.random.Next(this.minimum_attackers, this.maximum_attackers);
+        return this.get_unique_ints(amount_attackers, 0, this.attackers.Length);
     }
 
-    void shoot_projectile(GameObject projectile_prefab, Transform transform) {
+    protected int get_random_attack() {
+        return random.Next(0, this.projectile_prefabs.Length);
+    }
+
+    protected void shoot_projectile(GameObject projectile_prefab, Transform transform) {
         // create projectile and apply force to the rigidbody to shoot it
         GameObject instantiated_projectile = Instantiate(projectile_prefab, transform.position, transform.rotation);
         Rigidbody2D rigidbody = instantiated_projectile.GetComponent<Rigidbody2D>();
