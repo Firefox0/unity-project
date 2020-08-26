@@ -64,11 +64,13 @@
     <Compile Include="Assets\Scripts\HUD\HealthBarHandler.cs" />
     <Compile Include="Assets\Scripts\Misc\AttackController.cs" />
     <Compile Include="Assets\Scripts\HUD\StaminaBarHandler.cs" />
+    <Compile Include="Assets\Scripts\Projectile\Arrow_Projectile.cs" />
     <Compile Include="Assets\Scripts\Levels\DeathZone.cs" />
     <Compile Include="Assets\Scripts\Levels\Level 2\PlayerHit_2.cs" />
     <Compile Include="Assets\Scripts\HUD\CountdownHandler.cs" />
     <Compile Include="Assets\Scripts\UI\ShopSceneHandler.cs" />
     <Compile Include="Assets\Scripts\UI\MainMenuHandler.cs" />
+    <Compile Include="Assets\Scripts\Levels\Level 1\AttackController_1.cs" />
     <Compile Include="Assets\Scripts\Projectile\Homing_Projectile.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerHit.cs" />
     <Compile Include="Assets\Scripts\Projectile\Basic_Projectile.cs" />
@@ -76,10 +78,10 @@
     <Compile Include="Assets\Scripts\Projectile\Left_On_Ground.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\Misc\Scenes.cs" />
+    <Compile Include="Assets\Scripts\Levels\Level 3\attacker.cs" />
     <Compile Include="Assets\Scripts\Misc\IO.cs" />
     <Compile Include="Assets\Scripts\UI\OptionsSceneHandler.cs" />
     <Compile Include="Assets\Scripts\Projectile\Ground_Projectile.cs" />
-    <Compile Include="Assets\Scripts\Levels\Level 1\AttackController_1.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\Textures\TextMesh Pro\Shaders\TMPro.cginc" />
