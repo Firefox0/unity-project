@@ -136,7 +136,7 @@ GameObject:
   - component: {fileID: 127341393}
   - component: {fileID: 127341392}
   m_Layer: 5
-  m_Name: Level
+  m_Name: Level 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -256,7 +256,7 @@ GameObject:
   - component: {fileID: 201782855}
   - component: {fileID: 201782854}
   m_Layer: 5
-  m_Name: Text
+  m_Name: Stars
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -863,11 +863,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e774eaa4372a23418ffbc4681dbefbf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  level_1: {fileID: 127341392}
-  level_1_text: {fileID: 201782854}
-  level_2: {fileID: 1623294236}
-  level_2_text: {fileID: 2012031749}
+  levels:
+  - {fileID: 127341392}
+  - {fileID: 1623294236}
+  level_texts:
+  - {fileID: 201782854}
+  - {fileID: 2012031749}
   back_button: {fileID: 1772442335}
+  non_levels: 5
 --- !u!1 &1623294234
 GameObject:
   m_ObjectHideFlags: 0
@@ -881,7 +884,7 @@ GameObject:
   - component: {fileID: 1623294237}
   - component: {fileID: 1623294236}
   m_Layer: 5
-  m_Name: Level (1)
+  m_Name: Level 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1389,7 +1392,7 @@ GameObject:
   - component: {fileID: 2012031750}
   - component: {fileID: 2012031749}
   m_Layer: 5
-  m_Name: Text
+  m_Name: Stars
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
