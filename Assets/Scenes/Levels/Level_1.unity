@@ -1563,7 +1563,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   countdown: {fileID: 1228719559}
   star_display: {fileID: 1276735451}
-  current_level: 0
 --- !u!114 &1228719559
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4210,7 +4209,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2082930365}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f71d2522245900f4b887bc5ef01a246f, type: 3}
+  m_Script: {fileID: 11500000, guid: 5834aa89894258a4bb6c3cd95e109ee8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &2103158405
