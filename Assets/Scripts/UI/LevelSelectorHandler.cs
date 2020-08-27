@@ -17,6 +17,9 @@ public class LevelSelectorHandler : MonoBehaviour {
         IO.load_json();
         levels[0].onClick.AddListener(() => this.load_scene((int)Scenes.LEVEL_1));
         levels[1].onClick.AddListener(() => this.load_scene((int)Scenes.LEVEL_2));
+        levels[2].onClick.AddListener(() => this.load_scene((int)Scenes.LEVEL_3));
+        levels[3].onClick.AddListener(() => this.load_scene((int)Scenes.LEVEL_4));
+        levels[4].onClick.AddListener(() => this.load_scene((int)Scenes.LEVEL_5));
         back_button.onClick.AddListener(() => SceneManager.LoadScene((int)Scenes.MAINMENU));
         for (int i = 0; i < levels.Length; i++) {
             if (PlayerData.secrets.levels[i].stars_earned > 0) {
