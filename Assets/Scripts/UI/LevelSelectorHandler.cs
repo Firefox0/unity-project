@@ -8,27 +8,28 @@ using UnityEngine.UI;
 
 public class LevelSelectorHandler : MonoBehaviour {
 
-    public Button level_1;
-    public Text level_1_text;
-    public Button level_2;
-    public Text level_2_text;
+    public Button[] levels;
+    public Text[] level_texts;
     public Button back_button;
+    public int non_levels = 5; 
 
     void Start() {
         IO.load_json();
-        if (PlayerData.secrets.level_1.stars_earned > 0) {
-            this.level_1_text.text += string.Concat(Enumerable.Repeat('*', PlayerData.secrets.level_1.stars_earned));
-        } 
-        level_1.onClick.AddListener(() => load_scene((int)Scenes.LEVEL_1));
-        if (PlayerData.secrets.level_2.stars_earned > 0) {
-            this.level_2_text.text += string.Concat(Enumerable.Repeat('*', PlayerData.secrets.level_2.stars_earned));
-        }
-        level_2.onClick.AddListener(() => load_scene((int)Scenes.LEVEL_2));
+        levels[0].onClick.AddListener(() => this.load_scene((int)Scenes.LEVEL_1));
+        levels[1].onClick.AddListener(() => this.load_scene((int)Scenes.LEVEL_2));
         back_button.onClick.AddListener(() => SceneManager.LoadScene((int)Scenes.MAINMENU));
+        for (int i = 0; i < levels.Length; i++) {
+            if (PlayerData.secrets.levels[i].stars_earned > 0) {
+                this.level_texts[i].text += string.Concat(Enumerable.Repeat('*', PlayerData.secrets.levels[i].stars_earned));
+            }
+        }
     }
 
     void load_scene(int scene_index) {
         PlayerData.scene_index = scene_index;
+        int index = scene_index - this.non_levels;
+        PlayerHit.current_level = index;
+        CountdownHandler.current_level = index;
         SceneManager.LoadScene(scene_index);
     }
 }

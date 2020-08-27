@@ -3217,12 +3217,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1053171557}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2d549a82e36cf67479c9ff966f5b5651, type: 3}
+  m_Script: {fileID: 11500000, guid: 0f8828951dbeef14f8c268ae355f052d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  countdown: {fileID: 1053171560}
-  star_display: {fileID: 768416080}
-  current_level: 0
+  countdown: {fileID: 0}
+  star_display: {fileID: 0}
 --- !u!114 &1053171560
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4110,6 +4109,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 2117883531}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dea1d3959e9b26240971c197f50fbf6a, type: 3}
+  m_Script: {fileID: 11500000, guid: 5834aa89894258a4bb6c3cd95e109ee8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
