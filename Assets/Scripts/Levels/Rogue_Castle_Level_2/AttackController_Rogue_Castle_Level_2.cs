@@ -1,7 +1,8 @@
 ﻿using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
-public class AttackController_1 : AttackController {
+public class AttackController_Rogue_Castle_Level_2 : AttackController {
 
     private void Start() {
         StartCoroutine(this.initialize_attacks());
@@ -21,7 +22,7 @@ public class AttackController_1 : AttackController {
                         this.shoot_projectile(this.projectile_prefabs[attack_type], this.attackers[index].transform);
                         break;
                     case (1):
-                        for (int i = 0; i < 5; i++) {
+                        for (int i = 0; i < 3; i++) {
                             this.shoot_projectile(this.projectile_prefabs[attack_type], this.attackers[index].transform);
                             // blocks the other attacks, but necessary so all projectiles dont spawn on one point, needs improvement
                             yield return new WaitForSeconds(0.2f);
