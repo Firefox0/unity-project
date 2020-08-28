@@ -7,21 +7,21 @@ using UnityEngine.UI;
 
 public class CountdownHandler : MonoBehaviour {
 
-    public Text countdown;
-    public Text star_display;
+    private Text countdown;
+    private Text star_display;
 
     float current_time = 0f;
-    float[] star_requirements = { 5, 10, 15 };
-    public static int star_counter = 0;
-
-    public int current_level;
+    float[] star_requirements = { 3, 5, 10 };
+    public static int star_counter;
+    public static int current_level;
 
     void Start() {
-        this.current_time = this.star_requirements[star_counter];
-    }
-
-    public void set_level(ref int level) {
-        this.current_level = level;
+        this.countdown = this.gameObject.GetComponent<Text>();
+        // get child
+        this.star_display = this.gameObject.transform.Find("StarDisplay").GetComponent<Text>();
+        // reset static star counter
+        star_counter = 0;
+        this.current_time = this.star_requirements[0];
     }
 
     void Update() {
@@ -42,9 +42,21 @@ public class CountdownHandler : MonoBehaviour {
 
     void next_requirement() {
         if (star_counter == this.star_requirements.Length) {
-            this.current_level = star_counter;
+            // add stars to currency
+            PlayerData.secrets.currency += star_counter - PlayerData.secrets.levels[current_level].stars_earned;
+            // check last level
+            if (current_level == PlayerData.secrets.levels.Length - 1) {
+                PlayerData.secrets.stage++;
+                for (int i = 0; i < PlayerData.secrets.levels.Length; i++) {
+                    PlayerData.secrets.levels[i].stars_earned = 0;
+                }
+            }
+            else {
+                // save progression
+                PlayerData.secrets.levels[current_level].stars_earned = star_counter;
+            }
             IO.save_json();
-            SceneManager.LoadScene((int)Scenes.LEVELSELECTION);
+            SceneManager.LoadScene((int)Scenes.NORMALLEVELSELECTION);
             return;
         }
         this.current_time = this.star_requirements[star_counter];

@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Assets/Animations/Level_3.meta
 guid: d0395ab6c982c3a4b8b8e919e93d17f8
+=======
+guid: 7f5cfb10b06ce8e4d872ee9e7e51ccab
+>>>>>>> 1800a2759308330cbbba9ba63e0402252ae99dbb:Assets/Prefabs/Level_5.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}
