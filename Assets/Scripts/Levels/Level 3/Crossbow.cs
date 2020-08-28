@@ -6,18 +6,18 @@ public class Crossbow : MonoBehaviour {
     public GameObject player;
     public GameObject arrowPrefab;
 
-    private float fireRate = 2.0F;
-    private float nextArrow = 2.0F;
+    public float fireRate;
+    public float nextArrow;
 
     // Start is called before the first frame update
     void Start() {
-        /*this.crossbow = new GameObject();*/
+        
     }
 
     // Update is called once per frame
     void Update() {
-        aimAtPlayer();
-        shoot();
+        //aimAtPlayer();
+        //shootArrow();
     }
 
     public void aimAtPlayer() {
@@ -27,14 +27,17 @@ public class Crossbow : MonoBehaviour {
         this.transform.up = new Vector2(playerX - this.transform.position.x, playerY - this.transform.position.y);
     }
 
-    public void shoot() {
+    public void shootArrow() {
         if (Time.time > nextArrow) {
             nextArrow = Time.time + fireRate;
-            GameObject arrow = Instantiate(arrowPrefab, crossbow.transform.position, crossbow.transform.rotation);
-            Rigidbody2D rigidbody = arrow.GetComponent<Rigidbody2D>();
-            rigidbody.AddForce(transform.up * arrowPrefab.GetComponent<Basic_Projectile>().speed, ForceMode2D.Impulse);
-            
+            letArrowFly();
         }
+    }
+
+    public void letArrowFly() {
+        GameObject arrow = Instantiate(arrowPrefab, crossbow.transform.position, crossbow.transform.rotation);
+        Rigidbody2D rigidbody = arrow.GetComponent<Rigidbody2D>();
+        rigidbody.AddForce(transform.up * arrowPrefab.GetComponent<Basic_Projectile>().speed, ForceMode2D.Impulse);
     }
 }
 
