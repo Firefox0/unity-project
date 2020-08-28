@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class attacker : MonoBehaviour {
+public class Crossbow : MonoBehaviour {
 
     public GameObject crossbow;
     public GameObject player;
