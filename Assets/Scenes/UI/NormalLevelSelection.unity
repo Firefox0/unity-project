@@ -1554,8 +1554,10 @@ MonoBehaviour:
   - {fileID: 1163462694}
   - {fileID: 1847011403}
   back_button: {fileID: 1772442335}
-  offset: 7
-  locks: []
+  locks:
+  - {fileID: 684067006}
+  - {fileID: 1864600921}
+  - {fileID: 1883235083}
   stage_text: {fileID: 475668673}
 --- !u!1 &1432555086
 GameObject:

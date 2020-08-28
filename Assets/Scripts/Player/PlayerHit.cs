@@ -1,6 +1,5 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using System.Runtime.InteropServices;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -15,7 +14,7 @@ public class PlayerHit : MonoBehaviour {
     }
 
     private void OnTriggerEnter2D(Collider2D collider) {
-        if (collider.tag == "Projectile") { 
+        if (collider.tag == "Projectile") {
             Destroy(collider.gameObject);
             // increase damage depending on stage
             float amplifier = 1 + PlayerData.secrets.stage * 0.5f;
