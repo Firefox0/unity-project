@@ -42,9 +42,21 @@ public class CountdownHandler : MonoBehaviour {
 
     void next_requirement() {
         if (star_counter == this.star_requirements.Length) {
-            PlayerData.secrets.levels[current_level].stars_earned = star_counter;
+            // add stars to currency
+            PlayerData.secrets.currency += star_counter - PlayerData.secrets.levels[current_level].stars_earned;
+            // check last level
+            if (current_level == PlayerData.secrets.levels.Length - 1) {
+                PlayerData.secrets.stage++;
+                for (int i = 0; i < PlayerData.secrets.levels.Length; i++) {
+                    PlayerData.secrets.levels[i].stars_earned = 0;
+                }
+            }
+            else {
+                // save progression
+                PlayerData.secrets.levels[current_level].stars_earned = star_counter;
+            }
             IO.save_json();
-            SceneManager.LoadScene((int)Scenes.LEVELSELECTION);
+            SceneManager.LoadScene((int)Scenes.NORMALLEVELSELECTION);
             return;
         }
         this.current_time = this.star_requirements[star_counter];

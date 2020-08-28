@@ -12,7 +12,7 @@ public class MainMenuHandler : MonoBehaviour {
 
     void Start() {
         // scene index from build settings
-        this.play_button.onClick.AddListener(() => SceneManager.LoadScene((int)Scenes.LEVELSELECTION));
+        this.play_button.onClick.AddListener(() => SceneManager.LoadScene((int)Scenes.MODESELECTION));
         this.options_button.onClick.AddListener(() => SceneManager.LoadScene((int)Scenes.OPTIONS));
         this.quit_button.onClick.AddListener(() => Application.Quit());
     }

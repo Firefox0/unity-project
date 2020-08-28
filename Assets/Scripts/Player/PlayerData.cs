@@ -16,10 +16,9 @@ public class Secrets {
     public int stamina_level = 0;
     public int walking_speed_level = 0;
     public int running_speed_level = 0;
-    public float money = 100000000;
-    public int level = 0;
-    public int experience = 0;
-    public Level[] levels = new Level[9];
+    public int currency = 0;
+    public int stage = 0;
+    public Level[] levels = new Level[5];
 
     public Secrets() {
         this.levels[0] = new Level(true);
@@ -33,7 +32,7 @@ public class Level {
     public bool unlocked;
     public int stars_earned;
     public bool extra_crown;
-    public int record;
+    public float record;
 
     public Level(bool unlocked_ = false, int stars_earned_ = 0, bool extra_crown_ = false, int record_ = 0) {
         this.unlocked = unlocked_;
