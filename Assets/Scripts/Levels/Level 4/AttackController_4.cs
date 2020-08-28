@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AttackController_5 : AttackController {
+public class AttackController_4 : AttackController {
 
     private void Start() {
         StartCoroutine(this.initialize_attacks());
