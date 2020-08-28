@@ -21,7 +21,9 @@ public class PlayerHit : MonoBehaviour {
             health -= collider.gameObject.GetComponent<Basic_Projectile>().damage * amplifier;
             if (health <= 0) {
                 if (endless) {
-                    PlayerData.secrets.levels[current_level].record = Timer.current_time;
+                    if (Timer.current_time > PlayerData.secrets.levels[current_level].record) {
+                        PlayerData.secrets.levels[current_level].record = Timer.current_time;
+                    }
                 }
                 else {
                     // reference for readability
