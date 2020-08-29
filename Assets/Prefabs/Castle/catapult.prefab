@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1043274357691402323}
   - component: {fileID: 558666452124822453}
-  - component: {fileID: 9130737093949601886}
   m_Layer: 0
   m_Name: catapult
   m_TagString: Attacker
@@ -83,18 +82,3 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &9130737093949601886
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8153877479377677669}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 28aa0c557d70e0f4eac6615d3c0a77f7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  catapult: {fileID: 8153877479377677669}
-  player: {fileID: 0}
-  stonePrefab: {fileID: 8601131623537149417, guid: 2e255507083e7104baa871475da70faa, type: 3}

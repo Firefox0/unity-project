@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using UnityEngine;
 
-public class AttackController_3 : AttackController {
+public class AttackController_Castle_1 : AttackController {
 
     private void Start() {
         StartCoroutine(this.initialize_attacks());
