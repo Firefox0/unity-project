@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using System.Linq.Expressions;
 using UnityEngine;
 
@@ -35,7 +36,8 @@ public class AttackController : MonoBehaviour {
         if (amount > (max - min)) {
             return null;
         }
-        int[] int_array = new int[amount];
+        // fill array with min - 1 so it can still check min 
+        int[] int_array = Enumerable.Repeat(min-1, amount).ToArray();
         int counter = 0;
         while (counter < amount) {
             int random_int = random.Next(min, max);
