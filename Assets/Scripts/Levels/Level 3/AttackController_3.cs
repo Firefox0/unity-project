@@ -1,5 +1,4 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class AttackController_3 : AttackController {
@@ -25,7 +24,7 @@ public class AttackController_3 : AttackController {
                         for (int i = 0; i < 2; i++) {
                             this.shoot_projectile(this.projectile_prefabs[0], this.attackers[index].transform);
                             // blocks the other attacks, but necessary so all projectiles dont spawn on one point, needs improvement
-                            yield return new WaitForSeconds(0.4f);
+                            yield return new WaitForSeconds(0.3f);
                         }
                         break;
                     case 3:
@@ -33,7 +32,7 @@ public class AttackController_3 : AttackController {
                         {
                             this.shoot_projectile(this.projectile_prefabs[0], this.attackers[index].transform);
                             // blocks the other attacks, but necessary so all projectiles dont spawn on one point, needs improvement
-                            yield return new WaitForSeconds(0.4f);
+                            yield return new WaitForSeconds(0.3f);
                         }
                         break;
                     case 4:
@@ -41,7 +40,7 @@ public class AttackController_3 : AttackController {
                         {
                             this.shoot_projectile(this.projectile_prefabs[0], this.attackers[index].transform);
                             // blocks the other attacks, but necessary so all projectiles dont spawn on one point, needs improvement
-                            yield return new WaitForSeconds(0.4f);
+                            yield return new WaitForSeconds(0.3f);
                         }
                         break;
                 }
