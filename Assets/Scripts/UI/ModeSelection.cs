@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class ModeSelectionHandler : MonoBehaviour {
+public class ModeSelection : MonoBehaviour {
     public Button shop;
     public Button normal;
     public Button endless;

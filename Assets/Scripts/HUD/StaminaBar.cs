@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class StaminaBarHandler : MonoBehaviour {
+public class StaminaBar : MonoBehaviour {
     public Slider slider;
     public float stamina;
     void Start() {

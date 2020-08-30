@@ -29,11 +29,11 @@ public class PlayerHit : MonoBehaviour {
                     // reference for readability
                     ref int current_stars = ref PlayerData.secrets.levels[current_level].stars_earned;
                     // save when you beat previous score
-                    if (CountdownHandler.star_counter > current_stars) {
+                    if (Countdown.star_counter > current_stars) {
                         // add stars to currency
-                        PlayerData.secrets.currency += CountdownHandler.star_counter - current_stars;
+                        PlayerData.secrets.currency += Countdown.star_counter - current_stars;
                         // save progression
-                        current_stars = CountdownHandler.star_counter;
+                        current_stars = Countdown.star_counter;
                     }
                 }
                 IO.save_json();

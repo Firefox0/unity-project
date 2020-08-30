@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class OptionsSceneHandler : MonoBehaviour {
+public class OptionsScene : MonoBehaviour {
 
     public Button back_button;
 

@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class DeathSceneHandler : MonoBehaviour {
+public class DeathScene : MonoBehaviour {
 
     public Button retry_button;
     public Button back_button;

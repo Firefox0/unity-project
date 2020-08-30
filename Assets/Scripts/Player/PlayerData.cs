@@ -18,7 +18,7 @@ public class Secrets {
     public int running_speed_level = 0;
     public int currency = 0;
     public int stage = 0;
-    public Level[] levels = new Level[5];
+    public Level[] levels = new Level[12];
 
     public Secrets() {
         this.levels[0] = new Level(true);
