@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class CountdownHandler : MonoBehaviour {
+public class Countdown : MonoBehaviour {
 
     private Text countdown;
     private Text star_display;
