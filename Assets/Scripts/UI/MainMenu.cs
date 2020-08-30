@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class MainMenuHandler : MonoBehaviour {
+public class MainMenu : MonoBehaviour {
 
     public Button play_button;
     public Button options_button;

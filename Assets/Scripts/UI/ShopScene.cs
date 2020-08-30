@@ -6,7 +6,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class ShopSceneHandler : MonoBehaviour {
+public class ShopScene : MonoBehaviour {
 
     public Button back_button;
     

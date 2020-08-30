@@ -6,7 +6,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class LevelSelectorHandler : MonoBehaviour {
+public class LevelSelector : MonoBehaviour {
     public Button[] levels;
     public Text[] level_texts;
     public Button back_button;
