@@ -11,7 +11,6 @@ public class Catapult : MonoBehaviour {
 
     // Start is called before the first frame update
     void Start() {
-        /*this.crossbow = new GameObject();*/
     }
 
     // Update is called once per frame

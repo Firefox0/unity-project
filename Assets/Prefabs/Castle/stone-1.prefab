@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8650186751351456032}
   - component: {fileID: 7564882577762939132}
   - component: {fileID: 1886867031013555445}
-  - component: {fileID: 8987610436472542983}
+  - component: {fileID: 848973644085516055}
   m_Layer: 0
   m_Name: stone-1
   m_TagString: Projectile
@@ -132,7 +132,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &8987610436472542983
+--- !u!114 &848973644085516055
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -141,8 +141,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 8601131623537149417}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4866484a15062b64d9564442de0a816c, type: 3}
+  m_Script: {fileID: 11500000, guid: 7d5eecd2f9705754ea0f141473c2771f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 4
-  damage: 20
+  speed: 3
+  damage: 33

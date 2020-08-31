@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 797829132199230284}
   - component: {fileID: 797829132199230285}
-  - component: {fileID: 7291621864384021608}
   m_Layer: 0
   m_Name: crossbow2
   m_TagString: Attacker
@@ -83,20 +82,3 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &7291621864384021608
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 797829132199230286}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ca272e4c1a1411b47952257369b44b38, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  crossbow: {fileID: 797829132199230286}
-  player: {fileID: 0}
-  arrowPrefab: {fileID: 5987142537164635257, guid: 2e5298f1b9ca308418f661a6f45f6c96, type: 3}
-  fireRate: 2
-  nextArrow: 2
