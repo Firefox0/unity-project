@@ -178,11 +178,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: crossbow2 (3)
       objectReference: {fileID: 0}
-    - target: {fileID: 7291621864384021608, guid: 5be756451e1a88d4b8e37357f9a2ea47, type: 3}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 320158876}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 5be756451e1a88d4b8e37357f9a2ea47, type: 3}
 --- !u!1 &246163439
 GameObject:
@@ -369,7 +366,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 387bba5b5bf50134687a811bc5c7d5b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movement_speed: 0
+  movement_speed: 5
   rigidbody2d: {fileID: 320158881}
   animator: {fileID: 320158878}
 --- !u!61 &320158880
@@ -385,7 +382,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.0042428374, y: -0.0013213158}
+  m_Offset: {x: 0, y: 0.02}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -396,7 +393,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.7653409, y: 0.88306046}
+  m_Size: {x: 0.4, y: 0.7}
   m_EdgeRadius: 0
 --- !u!50 &320158881
 Rigidbody2D:
@@ -799,11 +796,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: crossbow2 (2)
       objectReference: {fileID: 0}
-    - target: {fileID: 7291621864384021608, guid: 5be756451e1a88d4b8e37357f9a2ea47, type: 3}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 320158876}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 5be756451e1a88d4b8e37357f9a2ea47, type: 3}
 --- !u!1 &958319808
 GameObject:
@@ -856,6 +850,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e62ec933168f1b4a847ca9bad741ed5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  slider: {fileID: 958319811}
+  stamina: 0
 --- !u!114 &958319811
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2974,6 +2970,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d77ecb03ebf33d943a6f04b0a159187d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  slider: {fileID: 1221782657}
+  health: 0
 --- !u!114 &1221782657
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3233,11 +3231,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: crossbow2 (5)
       objectReference: {fileID: 0}
-    - target: {fileID: 7291621864384021608, guid: 5be756451e1a88d4b8e37357f9a2ea47, type: 3}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 320158876}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 5be756451e1a88d4b8e37357f9a2ea47, type: 3}
 --- !u!1 &1619217595
 GameObject:
@@ -5449,8 +5444,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectile_prefabs:
   - {fileID: 5987142537164635257, guid: 2e5298f1b9ca308418f661a6f45f6c96, type: 3}
+  - {fileID: 7061871542442412571, guid: 9271f34dbd77dc443a8289d6dbf59267, type: 3}
   player: {fileID: 320158876}
-  minimum_attackers: 1
+  minimum_attackers: 2
   maximum_attackers: 6
   base_interval: 0.25
 --- !u!4 &1755886847
@@ -5597,11 +5593,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: crossbow2 (1)
       objectReference: {fileID: 0}
-    - target: {fileID: 7291621864384021608, guid: 5be756451e1a88d4b8e37357f9a2ea47, type: 3}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 320158876}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 5be756451e1a88d4b8e37357f9a2ea47, type: 3}
 --- !u!1 &1788995799
 GameObject:
@@ -5798,15 +5791,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: crossbow2
       objectReference: {fileID: 0}
-    - target: {fileID: 7291621864384021608, guid: 5be756451e1a88d4b8e37357f9a2ea47, type: 3}
-      propertyPath: arrowPrefab
-      value: 
-      objectReference: {fileID: 5987142537164635257, guid: 2e5298f1b9ca308418f661a6f45f6c96, type: 3}
-    - target: {fileID: 7291621864384021608, guid: 5be756451e1a88d4b8e37357f9a2ea47, type: 3}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 320158876}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 5be756451e1a88d4b8e37357f9a2ea47, type: 3}
 --- !u!1 &1852901357
 GameObject:
@@ -5920,11 +5906,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: crossbow2 (4)
       objectReference: {fileID: 0}
-    - target: {fileID: 7291621864384021608, guid: 5be756451e1a88d4b8e37357f9a2ea47, type: 3}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 320158876}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 5be756451e1a88d4b8e37357f9a2ea47, type: 3}
 --- !u!1 &1978497411
 GameObject:

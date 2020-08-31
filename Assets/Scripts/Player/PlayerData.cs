@@ -19,23 +19,14 @@ public class Secrets {
     public int currency = 0;
     public int stage = 0;
     public Level[] levels = new Level[12];
-
-    public Secrets() {
-        this.levels[0] = new Level(true);
-        for (int i = 1; i < this.levels.Length; i++) {
-            this.levels[i] = new Level();
-        }
-    }
 }
 
 public class Level {
-    public bool unlocked;
     public int stars_earned;
     public bool extra_crown;
     public float record;
 
-    public Level(bool unlocked_ = false, int stars_earned_ = 0, bool extra_crown_ = false, int record_ = 0) {
-        this.unlocked = unlocked_;
+    public Level(int stars_earned_ = 0, bool extra_crown_ = false, int record_ = 0) {
         this.stars_earned = stars_earned_;
         this.extra_crown = extra_crown_;
         this.record = record_;
