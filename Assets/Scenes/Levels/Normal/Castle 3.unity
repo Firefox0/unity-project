@@ -5638,6 +5638,7 @@ MonoBehaviour:
   projectile_prefabs:
   - {fileID: 5987142537164635257, guid: 2e5298f1b9ca308418f661a6f45f6c96, type: 3}
   - {fileID: 7061871542442412571, guid: 9271f34dbd77dc443a8289d6dbf59267, type: 3}
+  - {fileID: 2692499050758954544, guid: 7f2c6ed4bed812a44ac23a6a2f7b7879, type: 3}
   player: {fileID: 57756392}
   minimum_attackers: 4
   maximum_attackers: 5
