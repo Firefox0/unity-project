@@ -17,32 +17,38 @@ public class AttackController_Castle_1 : AttackController {
             foreach (int index in selected_attackers_index) {
                 int randomArrowCount = Random.Range(1, 4);
                 attack_type = this.get_random_attack();
-                switch (randomArrowCount) {
+                switch (attack_type) {
+                    case 0:
+                        for (int i = 0; i < randomArrowCount; i++) {
+                            this.shoot_projectile(this.projectile_prefabs[attack_type], this.attackers[index].transform);
+                            // blocks the other attacks, but necessary so all projectiles dont spawn on one point, needs improvement
+                            yield return new WaitForSeconds(0.3f);
+                        }
+                        break;
                     case 1:
-                        this.shoot_projectile(this.projectile_prefabs[attack_type], this.attackers[index].transform);
+                        for (int i = 0; i < randomArrowCount; i++) {
+                            this.shoot_projectile(this.projectile_prefabs[attack_type], this.attackers[index].transform);
+                            // blocks the other attacks, but necessary so all projectiles dont spawn on one point, needs improvement
+                            yield return new WaitForSeconds(0.3f);
+                        }
                         break;
                     case 2:
-                        for (int i = 0; i < 2; i++) {
+                        for (int i = 0; i < randomArrowCount; i++)
+                        {
                             this.shoot_projectile(this.projectile_prefabs[attack_type], this.attackers[index].transform);
                             // blocks the other attacks, but necessary so all projectiles dont spawn on one point, needs improvement
                             yield return new WaitForSeconds(0.3f);
                         }
                         break;
                     case 3:
-                        for (int i = 0; i < 3; i++)
-                        {
-                            this.shoot_projectile(this.projectile_prefabs[attack_type], this.attackers[index].transform);
-                            // blocks the other attacks, but necessary so all projectiles dont spawn on one point, needs improvement
-                            yield return new WaitForSeconds(0.3f);
-                        }
+                        this.shoot_projectile(this.projectile_prefabs[attack_type], this.attackers[index].transform);
+                        // blocks the other attacks, but necessary so all projectiles dont spawn on one point, needs improvement
+                        yield return new WaitForSeconds(0.5f);
                         break;
                     case 4:
-                        for (int i = 0; i < 4; i++)
-                        {
-                            this.shoot_projectile(this.projectile_prefabs[attack_type], this.attackers[index].transform);
-                            // blocks the other attacks, but necessary so all projectiles dont spawn on one point, needs improvement
-                            yield return new WaitForSeconds(0.3f);
-                        }
+                        this.shoot_projectile(this.projectile_prefabs[attack_type], this.attackers[index].transform);
+                        // blocks the other attacks, but necessary so all projectiles dont spawn on one point, needs improvement
+                        yield return new WaitForSeconds(1f);
                         break;
                 }
             }
