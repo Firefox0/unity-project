@@ -5588,7 +5588,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectile_prefabs: []
-  player: {fileID: 0}
+  player: {fileID: 394868415}
   minimum_attackers: 1
   maximum_attackers: 7
   base_interval: 2
