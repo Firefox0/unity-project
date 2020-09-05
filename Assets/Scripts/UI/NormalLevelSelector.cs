@@ -14,7 +14,6 @@ public class NormalLevelSelector : LevelSelector {
         IO.load_json();
         // base.init_buttons();
         PlayerData.endless = false;
-        offset = 7;
         stage_text.text = PlayerData.secrets.stage.ToString();
 
         for (int i = 0; i < levels.Length; i++) {
