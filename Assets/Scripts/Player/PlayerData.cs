@@ -4,6 +4,7 @@ using UnityEngine;
 
 public static class PlayerData {
     public static int scene_index = 0;
+    public static bool endless = false;
     public static Secrets secrets = new Secrets();
 }
 
@@ -18,7 +19,7 @@ public class Secrets {
     public int running_speed_level = 0;
     public int currency = 0;
     public int stage = 0;
-    public Level[] levels = new Level[12];
+    public Level[] levels = new Level[13];
 }
 
 public class Level {

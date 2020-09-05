@@ -15,7 +15,7 @@ public class Countdown : MonoBehaviour {
     public static int star_counter;
     public static int current_level;
 
-    void Start() {
+    void Awake() {
         this.countdown = this.gameObject.GetComponent<Text>();
         // get child
         this.star_display = this.gameObject.transform.Find("StarDisplay").GetComponent<Text>();
