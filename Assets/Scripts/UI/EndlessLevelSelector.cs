@@ -8,8 +8,6 @@ using UnityEngine.UI;
 
 public class EndlessLevelSelector : LevelSelector {
     void Start() {
-        IO.load_json();
-        // base.init_buttons();
         PlayerData.endless = true;
 
         for (int i = 0; i < this.levels.Length; i++) {
