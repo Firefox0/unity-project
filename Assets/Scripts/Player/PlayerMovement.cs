@@ -9,9 +9,13 @@ public class PlayerMovement : MonoBehaviour {
     Vector2 movement;
     public Animator animator;
     public static float stamina;
+    public static float walking_speed;
+    public static float running_speed;
 
     void Awake() {
-        this.movement_speed = PlayerData.secrets.walking_speed;
+        walking_speed = PlayerData.secrets.walking_speed;
+        running_speed = PlayerData.secrets.running_speed;
+        this.movement_speed = walking_speed;
         stamina = PlayerData.secrets.stamina;
     }
 
@@ -35,11 +39,11 @@ public class PlayerMovement : MonoBehaviour {
             // small buffer so you cant hold space all the time and
             // constantly switch between boosted and normal movement speed
             if (stamina >= 10) {
-                this.movement_speed = PlayerData.secrets.running_speed;
+                this.movement_speed = running_speed;
             } 
         }
         else {
-            this.movement_speed = PlayerData.secrets.walking_speed;
+            this.movement_speed = walking_speed;
             if (stamina < PlayerData.secrets.stamina) {
                 stamina += 0.5f;
             }

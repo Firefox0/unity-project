@@ -13,6 +13,7 @@ public class LevelSelector : MonoBehaviour {
     public int offset = 7;
 
     void Awake() {
+        IO.load_json();
         levels[0].onClick.AddListener(() => this.load_scene((int)Scenes.MOUNTAIN_1));
         levels[1].onClick.AddListener(() => this.load_scene((int)Scenes.MOUNTAIN_2));
         levels[2].onClick.AddListener(() => this.load_scene((int)Scenes.MOUNTAIN_3));

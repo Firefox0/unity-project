@@ -19,6 +19,7 @@ public class IO {
 
     public static void load_json() {
         if (!File.Exists(path)) {
+            save_json();
             return;
         }
         string read_json = System.IO.File.ReadAllText(path);
@@ -28,4 +29,3 @@ public class IO {
         PlayerData.secrets = deserialized;
     }
 }
-

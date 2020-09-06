@@ -11,8 +11,6 @@ public class NormalLevelSelector : LevelSelector {
     public TextMeshProUGUI stage_text;
 
     void Start() {
-        IO.load_json();
-        // base.init_buttons();
         PlayerData.endless = false;
         stage_text.text = PlayerData.secrets.stage.ToString();
 
