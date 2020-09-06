@@ -35,7 +35,7 @@ public class LevelSelector : MonoBehaviour {
         PlayerData.scene_index = scene_index;
         int index = scene_index - this.offset;
         PlayerHit.current_level = index;
-        if (PlayerData.endless) {
+        if (!PlayerData.endless) {
             Countdown.current_level = index;
         }
         SceneManager.LoadScene(scene_index);
