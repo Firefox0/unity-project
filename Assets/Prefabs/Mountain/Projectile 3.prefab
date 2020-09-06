@@ -146,7 +146,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 7.5
-  damage: 5
+  damage: 10
 --- !u!114 &2386554900584674033
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -159,4 +159,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87b3eae59d3058d42b1ab50e61662367, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  debuff: {fileID: 362631251969668201, guid: 6d4e0cdd69d2b6b4abad5aa11e494953, type: 3}
+  debuff: {fileID: 8453856277148540580, guid: 1233384c00bf6be4f891b71e54a9cc90, type: 3}
