@@ -14,6 +14,6 @@ public class TimeHandler : MonoBehaviour {
         else {
             this.instantiated_object = Instantiate(countdown, this.transform);
         }
-        this.instantiated_object.transform.parent = this.transform;
+        this.instantiated_object.transform.SetParent(this.transform);
     }
 }

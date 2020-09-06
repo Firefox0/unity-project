@@ -57,8 +57,9 @@ public class Countdown : MonoBehaviour {
             }
             IO.save_json();
             SceneManager.LoadScene((int)Scenes.NORMALLEVELSELECTION);
-            return;
         }
-        this.current_time = this.star_requirements[star_counter];
+        else {
+            this.current_time = this.star_requirements[star_counter];
+        }
     }
 }
