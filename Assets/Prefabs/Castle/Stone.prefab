@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 7564882577762939132}
   - component: {fileID: -1494774140409113340}
   - component: {fileID: 848973644085516055}
+  - component: {fileID: -1589785412367868831}
   m_Layer: 0
   m_Name: Stone
   m_TagString: Projectile
@@ -136,3 +137,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 4
   damage: 33
+--- !u!114 &-1589785412367868831
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8601131623537149417}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87b3eae59d3058d42b1ab50e61662367, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  debuff: {fileID: 2235019565003285296, guid: f481b4834f4f32843a22a334d2268090, type: 3}

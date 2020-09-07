@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 2066355716724242971}
   - component: {fileID: 2219292341230261627}
   - component: {fileID: 3909721662458419474}
+  - component: {fileID: 5657764624720749411}
   m_Layer: 0
   m_Name: Shooting Net
   m_TagString: Projectile
@@ -173,3 +174,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 3
   damage: 1
+--- !u!114 &5657764624720749411
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8767843791641599356}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87b3eae59d3058d42b1ab50e61662367, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  debuff: {fileID: 8453856277148540580, guid: 1233384c00bf6be4f891b71e54a9cc90, type: 3}

@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6752914966553846866}
   - component: {fileID: -4940497630153383913}
   - component: {fileID: 7600177099047160026}
+  - component: {fileID: 7793500309090105137}
   m_Layer: 0
   m_Name: Projectile 2
   m_TagString: Projectile
@@ -155,3 +156,16 @@ PolygonCollider2D:
       - {x: 0.08449689, y: -0.11049758}
       - {x: 0.11049761, y: -0.08099889}
       - {x: 0.12024878, y: -0.05675081}
+--- !u!114 &7793500309090105137
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5620937814058541044}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87b3eae59d3058d42b1ab50e61662367, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  debuff: {fileID: 3457623585134898540, guid: d6e34c4b910533d44a53376c622b0727, type: 3}
