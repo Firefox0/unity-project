@@ -27,7 +27,6 @@ public class Movement_Debuff : Basic_Debuff
     private void apply_debuff() {
         // only apply slow if its stronger/equal than the current one (if there are any)
         float temp_walking_speed = PlayerData.secrets.walking_speed * this.slow_factor;
-        Debug.Log("from: " + PlayerData.secrets.walking_speed + " to: " + temp_walking_speed);
         if (temp_walking_speed <= PlayerMovement.walking_speed) {
             PlayerMovement.walking_speed = temp_walking_speed;
             PlayerMovement.running_speed = PlayerData.secrets.running_speed * this.slow_factor;
