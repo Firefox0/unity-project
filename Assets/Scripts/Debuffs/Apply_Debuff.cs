@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Debuff : MonoBehaviour {
+public class Apply_Debuff : MonoBehaviour {
 
     public GameObject debuff;
 
