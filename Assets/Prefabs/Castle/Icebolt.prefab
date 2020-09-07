@@ -4835,8 +4835,9 @@ GameObject:
   - component: {fileID: -8733700046072852137}
   - component: {fileID: -5226941222587397324}
   - component: {fileID: 7359036108031239380}
+  - component: {fileID: 1996020272594463104}
   m_Layer: 0
-  m_Name: iceArrow
+  m_Name: Icebolt
   m_TagString: Projectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4971,6 +4972,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1996020272594463104
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2692499050758954544}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87b3eae59d3058d42b1ab50e61662367, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  debuff: {fileID: 1353657019926083594, guid: 36a4f5597c09bf74d8ef257a18c944a7, type: 3}
 --- !u!1 &4043262137418924520
 GameObject:
   m_ObjectHideFlags: 0

@@ -9,7 +9,7 @@ public class PlayerMovement : MonoBehaviour {
     Vector2 movement;
     public Animator animator;
     public static float stamina;
-    public static bool stamina_regeneration = true;
+    public static bool stamina_regeneration;
     public static float walking_speed;
     public static float running_speed;
 
@@ -18,6 +18,7 @@ public class PlayerMovement : MonoBehaviour {
         running_speed = PlayerData.secrets.running_speed;
         this.movement_speed = walking_speed;
         stamina = PlayerData.secrets.stamina;
+        stamina_regeneration = true;
     }
 
     // Update is called once per frame
