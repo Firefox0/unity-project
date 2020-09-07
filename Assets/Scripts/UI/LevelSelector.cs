@@ -8,7 +8,7 @@ using UnityEngine.UI;
 
 public class LevelSelector : MonoBehaviour {
     public Button[] levels;
-    public Text[] level_texts;
+    public TextMeshProUGUI[] level_texts;
     public Button back_button;
     public int offset = 7;
 

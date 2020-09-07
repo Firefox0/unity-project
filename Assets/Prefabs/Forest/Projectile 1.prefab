@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6796279020744927399}
   - component: {fileID: 8073194993185002722}
   - component: {fileID: 9004379424683709336}
+  - component: {fileID: -7927570953548318639}
   m_Layer: 0
   m_Name: Projectile 1
   m_TagString: Projectile
@@ -148,3 +149,16 @@ MonoBehaviour:
   damage: 25
   rotation_speed: 100
   time: 5
+--- !u!114 &-7927570953548318639
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9104330548183936978}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87b3eae59d3058d42b1ab50e61662367, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  debuff: {fileID: 1353657019926083594, guid: 36a4f5597c09bf74d8ef257a18c944a7, type: 3}

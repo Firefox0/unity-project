@@ -9,7 +9,7 @@ public class DeathScene : MonoBehaviour {
     public Button retry_button;
     public Button back_button;
 
-    void Start() {
+    private void Start() {
         this.retry_button.onClick.AddListener(() => SceneManager.LoadScene(PlayerData.scene_index));
         this.back_button.onClick.AddListener(() => SceneManager.LoadScene((int)Scenes.MODESELECTION));
     }

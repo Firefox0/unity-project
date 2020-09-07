@@ -16,6 +16,7 @@ public class Timer : MonoBehaviour {
 
     void Update() {
         current_time += Time.deltaTime;
+        current_time = (float)System.Math.Round(current_time, 3);
         timer.text = current_time.ToString();
     }
 }

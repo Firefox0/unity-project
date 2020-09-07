@@ -2,9 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Slow_Debuff : MonoBehaviour {
+public class Slow_Debuff : Basic_Debuff {
 
-    public float slow_time;
     public float slow_percentage;
 
     private void Start() {
@@ -12,20 +11,21 @@ public class Slow_Debuff : MonoBehaviour {
     }
 
     private void Update() {
-        this.slow_time -= Time.deltaTime;
-        if (this.slow_time <= 0) {
-            // reset speed 
-            PlayerMovement.walking_speed = PlayerData.secrets.walking_speed;
-            PlayerMovement.running_speed = PlayerData.secrets.running_speed;
+        if (base.has_ended()) {
+            this.reset_speed();
             Destroy(this.gameObject);
         }
     }
-
     private float slow_factor() {
         return 1 - this.slow_percentage / 100;
     }
 
-    public void apply_slow() {
+    private void reset_speed() {
+        PlayerMovement.walking_speed = PlayerData.secrets.walking_speed;
+        PlayerMovement.running_speed = PlayerData.secrets.running_speed;
+    }
+
+    private void apply_slow() {
         // only apply slow if its stronger/equal than the current one (if there are any)
         float temp_walking_speed = PlayerData.secrets.walking_speed * this.slow_factor();
         if (temp_walking_speed <= PlayerMovement.walking_speed) {
