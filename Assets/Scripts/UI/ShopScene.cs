@@ -15,30 +15,18 @@ public class ShopScene : MonoBehaviour {
     public Button walking_button;
     public Button running_button;
 
-    public GameObject health_object;
-    public GameObject stamina_object;
-    public GameObject walking_object;
-    public GameObject running_object;
-    public GameObject money_object; 
-
-    private TextMeshProUGUI health_text;
-    private TextMeshProUGUI stamina_text;
-    private TextMeshProUGUI walking_text;
-    private TextMeshProUGUI running_text;
-    private TextMeshProUGUI money_text;
+    public TextMeshProUGUI health_text;
+    public TextMeshProUGUI stamina_text;
+    public TextMeshProUGUI walking_text;
+    public TextMeshProUGUI running_text;
+    public TextMeshProUGUI money_text;
 
     void Start() {
         this.health_button.onClick.AddListener(() => this.buy(ref health_text, ref PlayerData.secrets.health, ref PlayerData.secrets.health_level, 5));
         this.stamina_button.onClick.AddListener(() => this.buy(ref stamina_text, ref PlayerData.secrets.stamina, ref PlayerData.secrets.stamina_level, 5));
         this.walking_button.onClick.AddListener(() => this.buy(ref walking_text, ref PlayerData.secrets.walking_speed, ref PlayerData.secrets.walking_speed_level, 0.1f));
         this.running_button.onClick.AddListener(() => this.buy(ref running_text, ref PlayerData.secrets.running_speed, ref PlayerData.secrets.running_speed_level, 0.1f));
-        this.back_button.onClick.AddListener(() => SceneManager.LoadScene((int)Scenes.MODESELECTION));
-
-        health_text = health_object.GetComponent<TextMeshProUGUI>();
-        stamina_text = stamina_object.GetComponent<TextMeshProUGUI>();
-        walking_text = walking_object.GetComponent<TextMeshProUGUI>();
-        running_text = running_object.GetComponent<TextMeshProUGUI>();
-        money_text = money_object.GetComponent<TextMeshProUGUI>();
+        this.back_button.onClick.AddListener(() => SceneManager.LoadScene(PlayerData.scene_index));
 
         health_text.text = PlayerData.secrets.health.ToString();
         stamina_text.text = PlayerData.secrets.stamina.ToString();

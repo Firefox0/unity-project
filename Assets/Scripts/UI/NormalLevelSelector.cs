@@ -11,6 +11,9 @@ public class NormalLevelSelector : LevelSelector {
     public TextMeshProUGUI stage_text;
 
     void Start() {
+        // for shop
+        PlayerData.scene_index = (int)Scenes.NORMALLEVELSELECTION;
+        // countdown or timer
         PlayerData.endless = false;
         stage_text.text = PlayerData.secrets.stage.ToString();
 

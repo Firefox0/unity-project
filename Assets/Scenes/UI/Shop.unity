@@ -2755,11 +2755,11 @@ MonoBehaviour:
   stamina_button: {fileID: 1199303445}
   walking_button: {fileID: 474418456}
   running_button: {fileID: 447272365}
-  health_object: {fileID: 1054941678}
-  stamina_object: {fileID: 400754306}
-  walking_object: {fileID: 217610958}
-  running_object: {fileID: 110858623}
-  money_object: {fileID: 877156767}
+  health_text: {fileID: 1054941680}
+  stamina_text: {fileID: 400754308}
+  walking_text: {fileID: 217610960}
+  running_text: {fileID: 110858625}
+  money_text: {fileID: 877156769}
 --- !u!1 &1642584264
 GameObject:
   m_ObjectHideFlags: 0

@@ -10,6 +10,7 @@ public class LevelSelector : MonoBehaviour {
     public Button[] levels;
     public TextMeshProUGUI[] level_texts;
     public Button back_button;
+    public Button shop_button;
     public int offset = 7;
 
     void Awake() {
@@ -29,6 +30,7 @@ public class LevelSelector : MonoBehaviour {
         levels[12].onClick.AddListener(() => this.load_scene((int)Scenes.FOREST_3));
 
         back_button.onClick.AddListener(() => SceneManager.LoadScene((int)Scenes.MODESELECTION));
+        shop_button.onClick.AddListener(() => SceneManager.LoadScene((int)Scenes.SHOP));
     }
 
     private void load_scene(int scene_index) {
