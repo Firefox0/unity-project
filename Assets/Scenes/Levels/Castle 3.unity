@@ -5635,13 +5635,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b39e75d3d3f36b04e8fcffab3dfb79b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-<<<<<<< HEAD:Assets/Scenes/Levels/Normal/Rogue_Castle_Level_3.unity
-  projectile_prefabs: []
-  player: {fileID: 394868415}
-  minimum_attackers: 1
-  maximum_attackers: 7
-  base_interval: 2
-=======
   projectile_prefabs:
   - {fileID: 5987142537164635257, guid: 2e5298f1b9ca308418f661a6f45f6c96, type: 3}
   - {fileID: 7061871542442412571, guid: 9271f34dbd77dc443a8289d6dbf59267, type: 3}
@@ -5650,7 +5643,6 @@ MonoBehaviour:
   minimum_attackers: 4
   maximum_attackers: 5
   base_interval: 0.5
->>>>>>> 1c91fe5ca2e7975793f6289ebec7848624b13bba:Assets/Scenes/Levels/Normal/Castle 3.unity
 --- !u!4 &2050029365
 Transform:
   m_ObjectHideFlags: 0
