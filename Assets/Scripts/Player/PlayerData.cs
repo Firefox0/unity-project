@@ -13,10 +13,8 @@ public class Secrets {
     public float stamina = 100f;
     public float walking_speed = 5f;
     public float running_speed = 7.5f;
-    public int health_level = 0;
-    public int stamina_level = 0;
-    public int walking_speed_level = 0;
-    public int running_speed_level = 0;
+    public float slow_resistance = 25f;
+    public float stun_resistance = 25f;
     public int currency = 0;
     public int stage = 0;
     public Level[] levels = new Level[13];

@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7434208605299481403}
-  - component: {fileID: 1156694246995100065}
+  - component: {fileID: 2864888303158667943}
   m_Layer: 0
   m_Name: Stun Strong
   m_TagString: Untagged
@@ -31,7 +31,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1156694246995100065
+--- !u!114 &2864888303158667943
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -40,7 +40,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1353657019926083594}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8291dcdd01826304e94d4728cd25e5ad, type: 3}
+  m_Script: {fileID: 11500000, guid: 2caa661852450fd4cb69885e3a758b7b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   debuff_time: 2
