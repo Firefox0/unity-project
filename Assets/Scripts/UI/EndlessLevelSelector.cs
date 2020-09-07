@@ -8,6 +8,9 @@ using UnityEngine.UI;
 
 public class EndlessLevelSelector : LevelSelector {
     void Start() {
+        // for shop 
+        PlayerData.scene_index = (int)Scenes.ENDLESSLEVELSELECTION;
+        // countdown or timer
         PlayerData.endless = true;
 
         for (int i = 0; i < this.levels.Length; i++) {

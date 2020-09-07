@@ -11,6 +11,8 @@ public class ModeSelection : MonoBehaviour {
     public Button back_button;
 
     void Start() {
+        // for shop 
+        PlayerData.scene_index = (int)Scenes.MODESELECTION;
         shop.onClick.AddListener(() => SceneManager.LoadScene((int)Scenes.SHOP));
         normal.onClick.AddListener(() => SceneManager.LoadScene((int)Scenes.NORMALLEVELSELECTION));
         endless.onClick.AddListener(() => SceneManager.LoadScene((int)Scenes.ENDLESSLEVELSELECTION));
