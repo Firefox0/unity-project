@@ -9,6 +9,7 @@ public class PlayerMovement : MonoBehaviour {
     Vector2 movement;
     public Animator animator;
     public static float stamina;
+    public static bool stamina_regeneration = true;
     public static float walking_speed;
     public static float running_speed;
 
@@ -44,7 +45,7 @@ public class PlayerMovement : MonoBehaviour {
         }
         else {
             this.movement_speed = walking_speed;
-            if (stamina < PlayerData.secrets.stamina) {
+            if (stamina < PlayerData.secrets.stamina && stamina_regeneration) {
                 stamina += 0.5f;
             }
         }
