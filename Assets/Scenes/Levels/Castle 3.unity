@@ -123,8 +123,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
-<<<<<<< HEAD
-=======
 --- !u!1001 &13644480
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -376,7 +374,6 @@ Transform:
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &154879542 stripped
-<<<<<<< HEAD
 Transform:
   m_CorrespondingSourceObject: {fileID: 6907530861641357619, guid: e52a2cc5704d2a44a9277c34fb7f19a6, type: 3}
   m_PrefabInstance: {fileID: 688360661}
@@ -386,17 +383,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6907530861641357619, guid: e52a2cc5704d2a44a9277c34fb7f19a6, type: 3}
   m_PrefabInstance: {fileID: 1328884222}
   m_PrefabAsset: {fileID: 0}
-=======
-Transform:
-  m_CorrespondingSourceObject: {fileID: 6907530861641357619, guid: e52a2cc5704d2a44a9277c34fb7f19a6, type: 3}
-  m_PrefabInstance: {fileID: 688360661}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &174448774 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 6907530861641357619, guid: e52a2cc5704d2a44a9277c34fb7f19a6, type: 3}
-  m_PrefabInstance: {fileID: 1328884222}
-  m_PrefabAsset: {fileID: 0}
->>>>>>> Firefox0
 --- !u!1001 &261648117
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5750,7 +5736,3 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.6378565, y: 8.337625}
   m_EdgeRadius: 0
-<<<<<<< HEAD
->>>>>>> 84159ef2c5fe6796acb15c384821b7c3777b00c0
-=======
->>>>>>> Firefox0
