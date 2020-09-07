@@ -5,7 +5,6 @@ using UnityEngine;
 public class Movement_Debuff : Basic_Debuff
 {
     public float slow_percentage;
-    protected float resistance;
     protected float slow_factor;
 
     private void Start() {
