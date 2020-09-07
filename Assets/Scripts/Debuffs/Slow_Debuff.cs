@@ -16,6 +16,7 @@ public class Slow_Debuff : Basic_Debuff {
             Destroy(this.gameObject);
         }
     }
+
     private float slow_factor() {
         return 1 - this.slow_percentage / 100;
     }
