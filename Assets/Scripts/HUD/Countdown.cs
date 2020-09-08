@@ -10,7 +10,7 @@ public class Countdown : MonoBehaviour {
     private Text star_display;
 
     float current_time = 0f;
-    float[] star_requirements = { 3, 5, 10 };
+    float[] star_requirements = { 15, 20, 25 };
     public static int star_counter;
     public static int current_level;
 

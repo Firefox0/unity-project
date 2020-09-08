@@ -9,12 +9,12 @@ public static class PlayerData {
 }
 
 public class Secrets {
-    public float health = 100f;
-    public float stamina = 100f;
+    public float health = 100;
+    public float stamina = 100;
     public float walking_speed = 5f;
     public float running_speed = 7.5f;
-    public float slow_resistance = 25f;
-    public float stun_resistance = 25f;
+    public float slow_resistance = 0;
+    public float stun_resistance = 0;
     public int currency = 0;
     public int stage = 0;
     public Level[] levels = new Level[13];
