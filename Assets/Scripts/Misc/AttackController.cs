@@ -19,6 +19,15 @@ public class AttackController : MonoBehaviour {
     private void Awake() {
         this.random = new System.Random();
         this.attackers = GameObject.FindGameObjectsWithTag("Attacker");
+        this.decrease_base_interval();
+    }
+
+    private void decrease_base_interval() {
+        // decrease base interval based on current stage
+        this.base_interval -= PlayerData.secrets.stage / 20f;
+        if (this.base_interval < 0) {
+            this.base_interval = 0;
+        } 
     }
 
     private void FixedUpdate() {
