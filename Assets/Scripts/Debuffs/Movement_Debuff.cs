@@ -16,6 +16,7 @@ public class Movement_Debuff : Basic_Debuff
             this.reset_speed();
             Destroy(this.gameObject);
         }
+        followPlayer();
     }
 
     private void reset_speed() {
@@ -30,5 +31,10 @@ public class Movement_Debuff : Basic_Debuff
             PlayerMovement.walking_speed = temp_walking_speed;
             PlayerMovement.running_speed = PlayerData.secrets.running_speed * this.slow_factor;
         }
+    }
+
+    private void followPlayer() {
+        // burn effect follows the player
+        this.transform.position = GameObject.FindGameObjectWithTag("Player").transform.position;
     }
 }

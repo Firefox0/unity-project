@@ -19316,8 +19316,9 @@ GameObject:
   - component: {fileID: 5954804327126238708}
   - component: {fileID: 2034613487464078529}
   - component: {fileID: -3148207526473746812}
+  - component: {fileID: -8147697610748460159}
   m_Layer: 0
-  m_Name: fireArrow
+  m_Name: Fire Arrow
   m_TagString: Projectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -19426,7 +19427,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
-  damage: 15
+  damage: 1
 --- !u!68 &-3148207526473746812
 EdgeCollider2D:
   m_ObjectHideFlags: 0
@@ -19455,3 +19456,16 @@ EdgeCollider2D:
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
   m_UseAdjacentEndPoint: 0
+--- !u!114 &-8147697610748460159
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7061871542442412571}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87b3eae59d3058d42b1ab50e61662367, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  debuff: {fileID: 2730880578201809901, guid: c34a93b6f229cc04288eb613d96cb6b9, type: 3}
