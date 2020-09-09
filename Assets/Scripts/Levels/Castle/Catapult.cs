@@ -29,8 +29,8 @@ public class Catapult : MonoBehaviour {
     public void shoot() {
         if (Time.time > nextStone) {
             nextStone = Time.time + fireRate;
-            GameObject arrow = Instantiate(stonePrefab, catapult.transform.position, catapult.transform.rotation);
-            Rigidbody2D rigidbody = arrow.GetComponent<Rigidbody2D>();
+            GameObject stone = Instantiate(stonePrefab, catapult.transform.position, catapult.transform.rotation);
+            Rigidbody2D rigidbody = stone.GetComponent<Rigidbody2D>();
             rigidbody.AddForce(transform.up * stonePrefab.GetComponent<Basic_Projectile>().speed, ForceMode2D.Impulse);
             
         }
