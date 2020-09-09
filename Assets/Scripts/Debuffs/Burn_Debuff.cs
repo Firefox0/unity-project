@@ -6,28 +6,27 @@ public class Burn_Debuff : Basic_Debuff
 {
 
     private float burn_damage = 0.2f;
+    private GameObject player;
 
     private void Start() {
-        this.apply_burn();
+        // save player, because have to find it all the time is inefficient
+        player = GameObject.FindGameObjectWithTag("Player");
     }
 
     private void Update()
     {
         if (base.has_ended()) {
             Destroy(this.gameObject);
-        } else {
-            apply_burn();
         }
-        followPlayer();
+         follow_player();
     }
 
-    private void apply_burn() {
-        // burn decreases the HP of the player by a small number over time.
-        PlayerData.secrets.health -= burn_damage;
+    private void FixedUpdate() {
+        PlayerHit.health -= burn_damage;
     }
 
-    private void followPlayer() {
+    private void follow_player() {
         // burn effect follows the player
-        this.transform.position = GameObject.FindGameObjectWithTag("Player").transform.position;
+        this.transform.position = this.player.transform.position;
     }
 }

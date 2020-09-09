@@ -28,5 +28,5 @@ public class Secrets {
 
 public class Level {
     public int stars_earned = 0;
-    public float record = 0f;
+    public float record = 0;
 }
