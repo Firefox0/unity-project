@@ -9,7 +9,7 @@ public class Burn_Debuff : Basic_Debuff
     private GameObject player;
 
     private void Start() {
-        // save player, because have to find it all the time is inefficient
+        // save player, because having to find it all the time is inefficient
         player = GameObject.FindGameObjectWithTag("Player");
     }
 
