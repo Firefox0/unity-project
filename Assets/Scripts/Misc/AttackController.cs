@@ -23,7 +23,7 @@ public class AttackController : MonoBehaviour {
     }
 
     private void decrease_base_interval() {
-        // decrease base interval based on current stage
+        // decrease base interval based on current stage to increase difficulty
         this.base_interval -= PlayerData.secrets.stage / 20f;
         if (this.base_interval < 0) {
             this.base_interval = 0;
