@@ -137,6 +137,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 4
   damage: 33
+  time: 3
+  cloud_of_smoke: {fileID: 1288510573138621530, guid: 1f0522187d5c0704d82a24336977dc56, type: 3}
 --- !u!114 &-1589785412367868831
 MonoBehaviour:
   m_ObjectHideFlags: 0
