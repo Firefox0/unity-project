@@ -1,28 +1,28 @@
-﻿
-using UnityEditor;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class Stone_Projectile : Basic_Projectile {
+public class Head_Projectile : Basic_Projectile
+{
 
     private float time;
-    public GameObject cloud_of_smoke;
+    public GameObject poison_cloud;
 
     // Start is called before the first frame update
     void Start() {
-        time = Random.Range(1.0f, 3.0f);
+        time = Random.Range(1.0f, 2.5f);
     }
 
     // Update is called once per frame
-    void Update() {
+    void Update()
+    {
         spin();
         this.time -= Time.deltaTime;
         if (time <= 0) {
-            Instantiate(cloud_of_smoke, this.transform.position, Quaternion.identity);
+            Instantiate(poison_cloud, this.transform.position, Quaternion.identity);
             Destroy(this.gameObject);
         }
     }
 
-    void spin() {
+    void spin()  {
         this.transform.Rotate(0, 0, 0.5f);
     }
 }

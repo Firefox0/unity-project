@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class Harpoon_Projectile : Basic_Projectile {
+public class Hook_Projectile : Basic_Projectile {
 
     // Start is called before the first frame update
     void Start() {
