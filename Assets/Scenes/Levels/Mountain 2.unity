@@ -4380,7 +4380,7 @@ MonoBehaviour:
   - {fileID: 2096842066248479732, guid: f53d6d062d03e3849913ead840ba6c14, type: 3}
   - {fileID: 8814345596378059614, guid: 36673d4d9f72c824f885eac872686031, type: 3}
   player: {fileID: 259826553}
-  minimum_attackers: 2
+  minimum_attackers: 3
   maximum_attackers: 4
   base_interval: 0.5
 --- !u!4 &1754011581

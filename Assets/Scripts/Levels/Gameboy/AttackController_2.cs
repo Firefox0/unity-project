@@ -18,17 +18,14 @@ public class AttackController_2 : AttackController {
             foreach (int index in selected_attackers_index) {
                 attack_type = this.get_random_attack();
                 switch (attack_type) {
-                    case (0):
-                        this.shoot_projectile(this.projectile_prefabs[attack_type], this.attackers[index].transform);
-                        break;
-                    case (1):
+                    case 1:
                         for (int i = 0; i < 3; i++) {
                             this.shoot_projectile(this.projectile_prefabs[attack_type], this.attackers[index].transform);
                             // blocks the other attacks, but necessary so all projectiles dont spawn on one point, needs improvement
                             yield return new WaitForSeconds(0.2f);
                         }
                         break;
-                    case (2):
+                    default:
                         this.shoot_projectile(this.projectile_prefabs[attack_type], this.attackers[index].transform);
                         break;
                 }
