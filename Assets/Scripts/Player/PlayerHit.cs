@@ -11,6 +11,7 @@ public class PlayerHit : MonoBehaviour {
     // normal or endless mode
     public static bool endless;
     private float amplifier;
+    public GameObject damaged;
 
     private void Awake() {
         health = PlayerData.secrets.health;

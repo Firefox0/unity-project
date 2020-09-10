@@ -1245,7 +1245,7 @@ MonoBehaviour:
   player: {fileID: 177958078}
   minimum_attackers: 2
   maximum_attackers: 4
-  base_interval: 1
+  base_interval: 0.5
 --- !u!4 &889728810
 Transform:
   m_ObjectHideFlags: 0
