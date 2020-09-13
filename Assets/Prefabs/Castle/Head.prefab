@@ -136,4 +136,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 4
   damage: 10
-  poison_cloud: {fileID: 8368223503680256659, guid: ad8ca20c236a8b44183139797c998406, type: 3}
+  poison_cloud: {fileID: 1582656586086186560, guid: e7508ae173a1f1e46ad6bc94cc66bff5, type: 3}
